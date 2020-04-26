@@ -1,0 +1,197 @@
+<!-- Built by Mingxuan Xie (https://mingxuan.fun/) using Aframe.io -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post Mass Media Exhibition</title>
+    <script src="js/aframe-v1.0.4.min.js"></script>
+    <script src="js/twoway-motion.js"></script>
+  </head>
+  <body>
+
+<!-- Aframe -->
+
+    <a-scene vr-mode-ui="enabled: false" wasd-control> 
+
+<!-- Assets -->
+      <a-assets>
+      <!-- 07 -->
+        <img id="the-spectator" src="asset/07/The_Spectator.jpg">
+        <audio id="the-whistler" src="asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio>
+      <!-- Vrch -->
+        <a-asset-item id="" src="asset/"></a-asset-item>
+        <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
+      </a-assets>
+
+<!-- Utilities -->
+      <a-sky color="black"></a-sky>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -90" animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" position="0 2 2" far="1000" fov="90">
+        <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <a-entity light="type: directional; color: #EEE; intensity: 2" position="-1 1 2"></a-entity>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.25"></a-entity>
+
+<!-- Exhibits -->
+      <!-- 07 -->
+      <a-entity id="medicalDancing1" gltf-model="#MedicalDancing" animation-mixer="" scale="3.655 3.6553 3.6553" position="3.34737 2.1126 -4.9648" rotation=""></a-entity>
+      <a-entity rotation="0 0 -25" position="0 2 -2">
+        <a-sphere radius="2" material="src: #the-spectator; color: #696969; roughness: 0.5; metalness: 0; side: double" animation="property: rotation; to: 0 -360 0; dur: 10000; easing: linear; loop: true"></a-sphere>
+      </a-entity>
+      <a-entity sound="src: #the-whistler; autoplay: true; loop: true"></a-entity>
+      <a-entity position="0 0 0" text="baseline: top;width: 4; wrapCount: 100; value: 
+      08/03/2020 Permanent Collection, Mudam Luxembourg Museum.
+      08/03/2020 Rachel Maclean, I’m Terribly Sorry, Casino Luxembourg. 
+      08/03/2020 Sophie Jung, They Might Stay the night, Casino Luxembourg. 
+      08/03/2020 Ben Wheele, Deep, Dark Dank, Casino Luxembourg. 
+      07/03/2020 Jean-Marie Biwer, D’après nature, Mudam Luxembourg Museum.
+      07/03/2020 Robert Morris, The perceiving body, Mudam Luxembourg Museum, Permanent Collection.
+      07/03/2020 Thomas Hirschhorn, World Airport, Mudam Luxembourg Museum.
+      07/03/2020 Of Beauty, Blackness & Power, Afro-American & African photography, Arendt & Medernach Luxembourg. 
+      07/03/2020 Permanent Collection, De Pont.
+      07/03/2020 Permanent Collection. Het HEM.
+      07/03/2020 Wolfgang Tillmans, Today Is The First Day, Monsoon Melody Wiels Belgium.
+      07/03/2020 Thao Nguyen Phan, Monsoon Melody Wiels Belgium.
+      05/03/2020 Permanent Collection, Van Abbemuseum.
+      05/03/2020 The Making Of Modern Art, Van Abbemuseum.
+      05/03/2020 Positions #5, Untold stories, Van Abbemuseum.
+      05/03/2020 Adriano Amaral, Witte de With Center for Contemporary Art.
+      07/03/2020 Carly Rose Bedford, Utopian Redux, Witte de With Center for Contemporary Art.
+      27/02/2020 Crowd, Hannah Barry Gallery.
+      27/02/2020 Caroline May, Male Imperatives, Camberwell Space.
+      27/02/2020 Willam Blake at Flat Time House, Flat Time House.
+      25/02/2020 Glimmer Music Festival, Chelsea College of Arts. 
+      15/02/2020 Steve McQueen, Tate Modern.
+      07/02/2020 Permanent Collection, Kolumba Kunstmuseum. 
+      06/02/2020 Park Seo-Bo Minjung, Langen Foundation.
+      06/02/2020 Permanent Collection, Museum Abteiberg.
+      06/02/2020 JSC ON VIEW, Julia Stoscheck Collection.
+      06/02/2020 HORIZONTAL VERTIGO, Julia Stoscheke Collection.
+      06/02/2020 Degree show, Kunstakademie Düsseldorf.
+      06/02/2020 Permanent Collection, Düsseldorf K21.
+      05/02/2020 Permanent Collection, Düsseldorf K20.
+      04/02/2020 Blinky Palerm, The Complete Editions, Ulrich Reininghaus Donation, Museum Ludwig.
+      04/02/2020 WADE GUYTON, ZWEI DEKADEN MCMXCIX–MMXIX, Museum Ludwig.
+      02/02/2020 RCA Work-in-progress show 2020, Royal College of Art.
+      29/01/2020 Beyond Bauhaus, Modernism in Britain 1933–66, RIBA.
+      25/01/2020 Behari Mukherjee, After SightBenode, David Zwirner.
+      25/01/2020 Ruth Asawa, A Line Can Go Anywhere, David Zwirner.
+      25/01/2020 Part 2 Maternality, Curated by Catherine McCormack, Richard Saltoun.
+      25/01/2020 Fishli Weiss, SHOULD I PAINT A PIRATE SHIP ON MY CAR WITH AN ARMED FIGURE ON IT HOLDING A DECAPITATED HEAD BY THE HAIR? Sprüth Magers
+      25/01/2020 Walking Through Walls 1, Curators: Sam Bardaouil and Till Fellrath, Gropius Bau.
+      24/01/2020 Yuko Mohri, Sadly, Painfully, Turbine (2019), Mother’s Tankstation Limited. 
+      24/01/2020 Tessa Boffin, Ingird Pollard, Juilliard Posener, Radclyffe Hall, Hot Moment, Auto Italia.
+      19/01/2020 Walking Through Walls, Curators: Sam Bardaouil and Till Fellrath, Gropius Bau.
+      19/01/2020 JOSE DÁVILA, THE MOMENT OF SUSPENSION, KÖNIG GALERIE.
+      19/01/2020 Art in Berlin 1880 – 1980, The Berlinische Galerie.
+      19/01/2020 Original Bauhaus, The centenary exhibition, The Berlinische Galerie.
+      19/01/2020 Beate Gütschow 'LS' and 'S', The Berlinische Galerie.
+      19/01/2020 Bettina Pousttchi, In Recent Years, The Berlinische Galerie.
+      17/01/2020 Recurrence, Artists: Lizzie Cardozo, Simon Job, Dayou Geng, Curated by Tristan Petsola, Saman Tehrani and Dayou Geng, Cookhouse Gallery.
+      08/01/2020 RICHARD GERSTL, INSPIRATION – LEGACY, Leopold Museum.
+      08/01/2020 VIENNA 1900, Birth of Modernism, Leopold Museum.
+      08/01/2020 Time Is Thirsty, Curator: Luca Lo Pinto, Kunsthalle Wien.
+      
+      08/01/2020 Nina Vobruba & Malte Zander, Kunsthalle Wien.
+      07/01/2020 Alfred Schmeller, The Museum as a Flashpoint, Museum moderner Kunst Wien.
+      07/01/2020 Forms Larger and Bolder: EVA HESSE DRAWINGS, Museum moderner Kunst Wien.
+      07/01/2020 Michele Abeles, Annette Kelm, Josephine Pryde, Eileen Quinlan, Objects Recognized in Flashes, Museum moderner Kunst Wien.
+      07/01/2020 Reading Time in Space, Modernism at mumok 1910 to 1955, Museum moderner Kunst Wien.
+      07/01/2020 Hans Schabus, Cafe Hansi, Museum moderner Kunst Wien.
+      07/01/2020 Gustav Klimt, Unteres Belvedere.
+      06/01/2020 Kuniyoshi+, Museum of Applied Arts. 
+      04/01/2020 Yan Pei-Ming / Courbet, Corps-à-corps, Petit Palais.
+      04/01/2020 GRECO, Grand Palais.
+      03/01/2020 Splittin At The Seams, Galerie Chez Valentin.
+      03/01/2020 Atsunobu Kohira, Black Matter, Matière Noire, Galerie Maubert.
+      03/01/2020 LYM, The ARTloud Collection, La Galerie Thorigny.
+      02/01/2020 Degas at the Opera, Musée d’Orsay.
+      02/01/2020 Permanent Collection, Musée National Picasso.
+      02/01/2020 Marc Perez, Paris. 
+      02/01/2020 Roger Ballen, Childhood (1974-2018), Galerie Karsten Greve.
+      02/01/2020 Robert COMBAS & Jean- Luc PARANT, Enter quatre zieux, Galerie Pierre-Alain Challier.
+      02/01/2020 Gotthard Graubner, Galerie Karsten Greve.
+      02/01/2020 Frédéric Benerath, etc galerie d'art.
+      02/01/2020 Romain Duris, Féroce, Galerie Cinema.	 
+      01/02/2020 LAURENT GOUMARRE, tiens voilà le soleil, je dis tout bas, Here is the sun, I say softly, Alaingutharc Gallery.
+      01/01/2020 BACON EN TOUTES LETTRES, Pompidou Paris.
+      01/01/2020 Points De Rencontres, Pompidou Paris.
+      01/01/2020 CHRISTIAN BOLTANSKI, FAIRE SON TEMPS, Pompidou Paris.
+      20/12/2019 Chips and Egg, Kate Davis, Cinzia Mutigli, Alia Syed, Milly Thompson, Hayley Tompkins, with a new text by Maike Hale Jones.
+      Curated by Helen Nisbet, The Sunday Painter.
+      20/12/2019 William Blake, Tate Britain.
+      17/12/2019 Dora Maar, Tate Modern.
+      17/12/2019 Francesco Clemente, Pastels, Lévy Gorvy London.
+      17/12/2019 Marc Vaux, New Paintings, Bernard Jacobson Gallery.
+      17/12/2019 Jockum Nordström, The Anchor Hits the Sand, David Zwirner London.
+      17/12/2019 Marcin Maciejowski, Private View, Galerie Thaddaeus Ropac London.
+      17/12/2019 Valie Export, The 1980 Venice Biennale Works, Galerie Thaddaeus Ropac London.
+      17/12/2019 Antony Gormley, In Formation, White Cube Mason's Yard.
+      17/12/2019 Anselm Kiefer, Superstrings, Runes, The Norns, Gordon's Knot, White Cube Bermondsey.
+      03/12/2019 Leo Villareal, Pace Gallery London.
+      01/12/2019 Antony Gormley, Royal Academy of Arts.
+      01/12/2019 Lucian Freud: The Self-portraits, Royal Academy of Arts.
+      16/11/2019 Punta Della Dogana, Pinualt Collection, LOUGO E SEGNI.
+      15/11/2019 La Biennale di Venezia 58th, Arsenale.
+      14/11/2019 La Biennale di Venezia 58th, Austrian Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, Romania.
+      14/11/2019 La Biennale di Venezia 58th, Poland Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, Serbia Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, Greek Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, Belgian Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, France Pavilion.
+      14/11/2019 La Biennale di Venezia 58th, Russia Pavilion.
+      24/10/2019 The international art festival, Chelsea College of Arts. 
+      21/10/2019 Permanent Collection, Tate Modern. 
+      21/10/2019 Olafur Eliasson, In Real life, Tate modern.
+      21/10/2019 Nam June Paik, Tate Modern.
+      21/10/2019 Kara Walker (Hyundai Commission 2019), Fons Americanus, Turbine hall, Tate Modern.
+      09/10/2019 Danh Vo, Cathedral Block Prayer Stage Gun Sock, Marian Goodman Gallery.
+      09/10/2019 James Rosenquist:Visualising the Sixties, Elyhouse.
+      09/10/2019 Kara Walker, As It Happens, Curated by Hilton Als, Sprüth Magers Gallery.
+      09/10/2019 Song Dong 宋, Same Bed Different Dreams, Pace Gallery.
+      06/10/2019 Anna Maria Maiolino, Making love revolutionary, Whitechapel Gallery.
+      09/10/2019 Meshes of the afternoon (1943), Maya Deren, Alexander Hammid, White Cube Bermondsey.
+      09/10/2019 Mona Hatoum, Remains to be seen, White cube Bermondsey.
+      05/10/2019 Frieze London 2019.
+      02/10/2019 Contemporary Art Day Auction, London Sotheby's 2019.
+      28/09/2019 NO!art :an independent, anti-establishment art movement that began in 1959 in New York  by Boris Lurie (1924-2008), Stanley Fisher (1926-1980) and Sam Goodman (1919-1967), Cell Project Space. 
+      27/09/2019 Dayanita Singh, Pothi Khana (2018), Montage, Firth Street Gallery. 
+      27/09/2019 Grayson Perry: Super Rich Interior Decoration, Victoria Miro. 
+      26/09/2019 Wang Wei, LISTEN, Edouard Malingue Gallery, London. 
+      21/09/2019 Peter Doig: Paintings, First exhibition of new works in London since 2012, Michael Werner Gallery. 
+      13/09/2019 Helene Schjerfbeck, The Gabrielle Jungels-Winkler Galleries, Burlington Gardens, Royal Academy of Arts.
+      55/05/2019 2019 Degree Show, Central Saint Martins.
+      15/05/2019 VISIONS OF THE SELF: REMBRANDT AND NOW In partnership with English Heritage, Gagosian London. 
+      14/05/2019 Nan Goldin, Tate Modern. 	
+      10/05/2019 Andy Warhol and Eduardo Paolozzi, I want to be a machine, Scottish National Gallery of Modern Art. 
+      10/05/2019 Permanent Collection, Scottish National Gallery of Modern Art. 
+      01/05/2019 Zhou Li, Original state of mind, Machines do not make us into machines, White cube Bermondsey.
+      01/05/2019 Sarah Morris, White cube Bermondsey.
+      20/04/2019 Fragmentation, The Coningsby Gallery. 
+      19/04/2019 Permanent Collection, Tate Britain. 
+      17/04/2019 JMW Turner, Tate Britain.
+      24/03/2019 Franz West, Tate Modern. 
+      24/03/2019 Dorothea Tanning, Tate Modern.
+      22/03/2019 Summertime 9A, Jackson Pollock, Whitechapel Gallery. 
+      22/03/2019 Is this tomorrow? Whitechapel Gallery. 
+      24/02/2019 Spare parts, Science Gallery London.
+      15/02/2019 Morag Keil : Morag Kiel, Institute of Contemporary Arts. 
+      09/02/2019 Tracey Emin, White Cube. 
+      24/01/2019 Liu XiaoDong, Weight of insomnia, Lissen Gallery. 
+      09/01/2019 禹步 PROREGRESS: Art in an age of historical ambivalence, Chief Curator: Cuauhtémoc Medina,12th Shanghai Biennale, Power Station of Art, 上海当代艺术博物馆.
+      ;" animation="property: position; to: 0 15 0; dur: 40000; easing: linear; loop: true"></a-entity>
+<!-- Scene -->
+      <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 8" mixin="rect"></a-entity>
+      <a-entity position="0 0 2" mixin="rect"></a-entity>
+      <a-entity position="0 0 0" mixin="rect"></a-entity>
+      <a-entity position="0 0 -2" mixin="rect"></a-entity>
+      <a-entity position="0 0 -8" mixin="rect"></a-entity>
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
+    </a-scene>
+  </body>
+</html>

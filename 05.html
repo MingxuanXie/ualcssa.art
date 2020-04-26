@@ -1,0 +1,105 @@
+<!-- Built by Mingxuan Xie (https://mingxuan.fun/) using Aframe.io -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post Mass Media Exhibition</title>
+    <script src="js/aframe-v1.0.4.min.js"></script>
+    <script src="js/twoway-motion.js"></script>
+  </head>
+  <body>
+
+<!-- Aframe -->
+
+    <a-scene vr-mode-ui="enabled: false" wasd-control> 
+
+<!-- Assets -->
+      <a-assets>
+      <!-- 05 -->
+        <img id="05-1" src="asset/05/0424_1.jpg">
+        <img id="05-2" src="asset/05/0424_2.jpg">
+        <img id="05-3" src="asset/05/0424_3.jpg">
+        <img id="05-4" src="asset/05/0424_4.jpg">
+        <img id="05-5" src="asset/05/0424_5.jpg">
+        <img id="05-6" src="asset/05/0424_6.jpg">
+        <img id="05-7" src="asset/05/0424_7.jpg">
+        <img id="05-8" src="asset/05/0424_8.jpg">
+        <img id="05-9" src="asset/05/0424_9.jpg">
+        <img id="05-10" src="asset/05/0424_10.jpg">
+        <img id="05-11" src="asset/05/0424_11.jpg">
+        <img id="05-12" src="asset/05/0424_12.jpg">
+        <img id="05-13" src="asset/05/0424_13.jpg">
+        <img id="05-14" src="asset/05/0424_14.jpg">
+        <img id="05-15" src="asset/05/0424_15.jpg">
+        <img id="05-16" src="asset/05/0424_16.jpg">
+        <img id="05-17" src="asset/05/0424_17.jpg">
+        <img id="05-18" src="asset/05/0424_18.jpg">
+        <img id="05-19" src="asset/05/0424_19.jpg">
+        <img id="05-20" src="asset/05/0424_20.jpg">
+        <img id="05-21" src="asset/05/0424_21.jpg">
+        <img id="05-22" src="asset/05/0424_22.jpg">
+        <img id="05-23" src="asset/05/0424_23.jpg">
+        <img id="05-24" src="asset/05/0424_24.jpg">
+        <img id="05-25" src="asset/05/0424_25.jpg">
+        <img id="05-26" src="asset/05/0424_26.jpg">
+        <img id="05-27" src="asset/05/0424_27.jpg">
+        <img id="05-28" src="asset/05/0424_28.jpg">
+
+      <!-- Vrch -->
+        <a-asset-item id="" src="asset/"></a-asset-item>
+        <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
+      </a-assets>
+
+<!-- Utilities -->
+      <a-sky color="black"></a-sky>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" position="0 2 2" far="1000" fov="90">
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <!-- <a-entity light="type: directional; color: #EEE; intensity: 2" position="-1 1 2"></a-entity> -->
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.25"></a-entity>
+
+<!-- Exhibits -->
+      <!-- 05 -->
+      <a-image src="#05-1" width="0.45" height="1.45" opacity="0.95" position="-1.19976 2 0" material="" geometry=""></a-image>
+      <a-image src="#05-2" width="0.45" height="1.45" opacity="0.95" position="1.53539 2 0.33415" material="" geometry=""></a-image>
+      <a-image src="#05-3" width="0.45" height="1.45" opacity="0.95" position="0.82229 2.53798 0.345" material="" geometry=""></a-image>
+      <a-image src="#05-4" width="0.45" height="1.45" opacity="0.95" position="-0.57701 2.3381 -0.41206" material="" geometry=""></a-image>
+      <a-image src="#05-5" width="0.45" height="1.45" opacity="0.95" position="1.09869 2 0.03929" material="" geometry=""></a-image>
+      <a-image src="#05-6" width="0.45" height="1.45" opacity="0.95" position="0.48159 2.60991 0.11641" material="" geometry=""></a-image>
+      <a-image src="#05-7" width="0.45" height="1.45" opacity="0.95" position="-1.61628 1.31229 0.44385" material="" geometry=""></a-image>
+      <a-image src="#05-8" width="0.45" height="1.45" opacity="0.95" position="-0.40072 2.5799 -0.93962" material="" geometry=""></a-image>
+      <a-image src="#05-9" width="0.45" height="1.45" opacity="0.95" position="-0.42923 2 -0.25166" material="" geometry=""></a-image>
+      <a-image src="#05-10" width="0.45" height="1.45" opacity="0.95" position="-1.13509 1.66821 0.08744" material="" geometry=""></a-image>
+      <a-image src="#05-11" width="0.45" height="1.45" opacity="0.95" position="1.34288 2.37903 -0.1461" material="" geometry=""></a-image>
+      <a-image src="#05-12" width="0.45" height="1.45" opacity="0.95" position="0.3309 2.78356 -0.96771" material="" geometry=""></a-image>
+      <a-image src="#05-13" width="0.45" height="1.45" opacity="0.95" position="-0.02037 2.66319 -0.70771" material="" geometry=""></a-image>
+      <a-image src="#05-14" width="0.45" height="1.45" opacity="0.95" position="0.5599 2.65247 -0.45733" material="" geometry=""></a-image>
+      <a-image src="#05-15" width="0.45" height="1.45" opacity="0.95" position="-0.9766 2.70647 -0.34906" material="" geometry=""></a-image>
+      <a-image src="#05-16" width="0.45" height="1.45" opacity="0.95" position="1.10692 2.77077 -0.47963" material="" geometry=""></a-image>
+      <a-image src="#05-17" width="0.45" height="1.45" opacity="0.95" position="-1.71219 1.772 -0.15676" material="" geometry=""></a-image>
+      <a-image src="#05-18" width="0.45" height="1.45" opacity="0.95" position="-0.57882 1.50277 0.4838" material="" geometry=""></a-image>
+      <a-image src="#05-19" width="0.45" height="1.45" opacity="0.95" position="2.05968 1.66658 0.66324" material="" geometry=""></a-image>
+      <a-image src="#05-20" width="0.45" height="1.45" opacity="0.95" position="1.62924 2.69015 -0.16373" material="" geometry=""></a-image>
+      <a-image src="#05-21" width="0.45" height="1.45" opacity="0.95" position="-2.04797 1.18815 -0.0105" material="" geometry=""></a-image>
+      <a-image src="#05-22" width="0.45" height="1.45" opacity="0.95" position="0.51851 3.03143 -1.13626" material="" geometry=""></a-image>
+      <a-image src="#05-23" width="0.45" height="1.45" opacity="0.95" position="0.15243 2.25026 -0.57579" material="" geometry=""></a-image>
+      <a-image src="#05-24" width="0.45" height="1.45" opacity="0.95" position="-0.20203 2.63645 -1.25709" material="" geometry=""></a-image>
+      <a-image src="#05-25" width="0.45" height="1.45" opacity="0.95" position="1.84701 2.13836 0.1102" material="" geometry=""></a-image>
+      <a-image src="#05-26" width="0.45" height="1.45" opacity="0.95" position="-0.67931 1.9088 0" material="" geometry=""></a-image>
+      <a-image src="#05-27" width="0.45" height="1.45" opacity="0.95" position="-1.46136 2.32078 -0.57845" material="" geometry=""></a-image>
+      <a-image src="#05-28" width="0.45" height="1.45" opacity="0.95" position="0.0353 2 -0.02496" material="" geometry=""></a-image>
+
+<!-- Scene -->
+      <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 8" mixin="rect"></a-entity>
+      <a-entity position="0 0 2" mixin="rect"></a-entity>
+      <a-entity position="0 0 0" mixin="rect"></a-entity>
+      <a-entity position="0 0 -2" mixin="rect"></a-entity>
+      <a-entity position="0 0 -8" mixin="rect"></a-entity>
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
+    </a-scene>
+  </body>
+</html>

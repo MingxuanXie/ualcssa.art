@@ -1,0 +1,1 @@
+Gif Optimization: Upload to Giphy and Save As the gif on the final page.
