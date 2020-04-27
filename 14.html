@@ -1,0 +1,63 @@
+<!-- Design and built by vrch.tech using aframe.io -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post Mass Media Exhibition</title>
+    <script src="./js/aframe.min.js"></script>
+    <script src="./js/twoway-motion.js"></script>
+    <script src="./js/aframe-gif-shader.min.js"></script>
+    
+  </head>
+  <body>
+
+<!-- Aframe -->
+
+    <a-scene vr-mode-ui="enabled: false" wasd-control> 
+
+<!-- Assets -->
+      <a-assets>
+      <!-- 14 -->
+      <img id="14-3" src="./asset/14/Great_Harmony_3.jpg">
+      <img id="14-5" src="./asset/14/Great_Harmony_5.jpg">
+      <img id="14-8" src="./asset/14/Great_Harmony_8.jpg">
+      <img id="14-10" src="./asset/14/Great_Harmony_10.jpg">
+      <!-- Vrch -->
+        <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
+      </a-assets>
+
+<!-- Utilities -->
+      <a-sky color="black"></a-sky>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 5" far="1000" fov="90">
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <!-- <a-entity light="type: directional; color: #EEE; intensity: 2" position="-1 1 2"></a-entity> -->
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.25"></a-entity>
+
+<!-- Exhibits -->
+      <!-- 14 -->
+      <a-entity position="-0.25715 2 -0.80919" geometry="primitive: plane; width: 1.6; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_1.gif)"></a-entity>
+      <a-entity position="-2.05747 2 -0.19115" geometry="primitive: plane; width: 2; height: 2" material="shader: gif; src: url(./asset/14/Great_Harmony_2.gif)"></a-entity>
+      <a-image position="-1.76969 0 1.46762" scale="3 3 3" width="0.45" height="1.45" src="#14-3" material="" geometry=""></a-image>
+      <a-entity position="2.71832 0.71133 -1.25902" geometry="primitive: plane; width: 2.4; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_4.gif)"></a-entity>
+      <a-image position="1.80199 0 2.03629" scale="3 3 3" width="0.512" height="1.536" src="#14-5" material="" geometry=""></a-image>
+      <a-entity position="4.14377 2 1.94078" geometry="primitive: plane; width: 1.6; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_6.gif)"></a-entity>
+      <a-entity position="-3.99179 2 1.62177" geometry="primitive: plane; width: 2.4; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_7.gif)"></a-entity>
+      <a-image position="-0.64679 -0.51098 2.69494" width="2" height="2" src="#14-8" material="" geometry=""></a-image>
+      <a-entity position="0 2 1.18261" geometry="primitive: plane; width: 2; height: 2" material="shader: gif; src: url(./asset/14/Great_Harmony_9.gif)"></a-entity>
+      <a-image position="-4.44467 0 2.88895" scale="3 3 3" width="0.512" height="1.526" src="#14-10" material="" geometry=""></a-image>
+
+<!-- Scene -->
+      <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 8" mixin="rect"></a-entity>
+      <a-entity position="0 0 2" mixin="rect"></a-entity>
+      <a-entity position="0 0 0" mixin="rect"></a-entity>
+      <a-entity position="0 0 -2" mixin="rect"></a-entity>
+      <a-entity position="0 0 -8" mixin="rect"></a-entity>
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
+    </a-scene>
+  </body>
+</html>

@@ -5,16 +5,16 @@
   <head>
     <meta charset="utf-8">
     <title>Post Mass Media Exhibition</title>
-    <script src="js/aframe.min.js"></script>
+    <script src="./js/aframe.min.js"></script>
     <!-- <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> -->
-    <script src="js/hyper-move.js"></script>
-    <script src="js/twoway-motion.js"></script>
-    <!-- <script src="js/aframe-extras.min.js"></script> -->
-    <!-- <script src="js/aframe-look-at-component.min.js"></script> -->
-    <!-- <script src="js/noise.js"></script> POOL PERFORMANCE ON PHONES -->
-    <!-- <script src="js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
-    <!-- <script src="js/click-url.js"></script> -->
-    <script src="js/aframe-gif-shader.min.js"></script>
+    <script src="./js/hyper-move.js"></script>
+    <script src="./js/twoway-motion.js"></script>
+    <!-- <script src="./js/aframe-extras.min.js"></script> -->
+    <!-- <script src="./js/aframe-look-at-component.min.js"></script> -->
+    <!-- <script src="./js/noise.js"></script> POOL PERFORMANCE ON PHONES -->
+    <!-- <script src="./js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
+    <!-- <script src="./js/click-url.js"></script> -->
+    <script src="./js/aframe-gif-shader.min.js"></script>
   </head>
   <body>
 
@@ -26,16 +26,15 @@
 <!-- Assets -->
       <a-assets>
       <!-- 07 -->
-        <img id="the-spectator" src="asset/07/The_Spectator.jpg">
-        <audio id="the-whistler" src="asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio>
+        <img id="the-spectator" src="./asset/07/The_Spectator.jpg">
+        <audio id="the-whistler" src="./asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio>
       <!-- 08 -->
-        <video id="ITERATING" autoplay loop="true" src="asset/08/GU-_ITERATING_-_Effie_Gu.mp4"></video>
+        <video id="ITERATING" autoplay loop="true" src="./asset/08/GU-_ITERATING_-_Effie_Gu.mp4"></video>
       <!-- 11 -->
-        <video id="Miss_Loss" autoplay loop="true" src="asset/11/Qi_Sun(Keyki)-Miss_Loss_-_Qi_Sun.mp4"></video>
+        <!-- <video id="Miss_Loss" autoplay loop="true" src="./asset/11/Qi_Sun(Keyki)-Miss_Loss_-_Qi_Sun.mp4"></video> -->
       <!-- 14 -->
-        
+
       <!-- Vrch -->
-        <a-asset-item id="" src="asset/"></a-asset-item>
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
 
@@ -212,12 +211,12 @@
       <!-- 08 -->
       <a-video src="#ITERATING" width="16" height="9" position="0 0 -20"></a-video>
       <!-- 11 -->
-      <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation=""></a-video>
+      <!-- <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation=""></a-video>
       <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 90 0"></a-video>
       <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 180 0"></a-video>
-      <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 270 0"></a-video>
+      <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 270 0"></a-video> -->
       <!-- 14 -->
-      <a-entity geometry="primitive:box;" material="shader:gif;src:url(asset/14/Great_Harmony_2.gif);"></a-entity>
+      <a-entity geometry="primitive:box;" material="shader:gif;src:url(./asset/14/Great_Harmony_2.gif);"></a-entity>
 
 <!-- Scene -->
       <a-entity position="0 0 16" mixin="rect"></a-entity>
