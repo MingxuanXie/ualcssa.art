@@ -1,0 +1,50 @@
+<!-- Design and built by vrch.tech using aframe.io -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post Mass Media Exhibition</title>
+    <script src="./js/aframe.min.js"></script>
+    <script src="./js/twoway-motion.js"></script>    
+  </head>
+  <body>
+
+<!-- Aframe -->
+
+    <a-scene vr-mode-ui="enabled: false" wasd-control> 
+
+<!-- Assets -->
+      <a-assets>
+      <!-- 15 -->
+        <a-asset-item id="15" src="./asset/15/gltf/scene.gltf"></a-asset-item>
+      <!-- Vrch -->
+        <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
+      </a-assets>
+
+<!-- Utilities -->
+      <a-sky color="black"></a-sky>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 3" far="1000" fov="90"></a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <a-entity position="2.13646 3.32801 1.06437" light="type: point; castShadow: true"></a-entity>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 1"></a-entity>
+
+<!-- Exhibits -->
+      <!-- 15 -->
+      <a-box color="#222" height="3" width="3" depth="0.5" position="0 2 0" rotation="0 0 0"  material="roughness: 1" geometry="">
+        <a-entity gltf-model="#15" position="0.05 0 0.2" scale="0.25 0.25 0.25" rotation="90 -2 0"></a-entity>
+      </a-box>
+
+<!-- Scene -->
+      <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 8" mixin="rect"></a-entity>
+      <a-entity position="0 0 2" mixin="rect"></a-entity>
+      <a-entity position="0 0 0" mixin="rect"></a-entity>
+      <a-entity position="0 0 -2" mixin="rect"></a-entity>
+      <a-entity position="0 0 -8" mixin="rect"></a-entity>
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
+    </a-scene>
+  </body>
+</html>
