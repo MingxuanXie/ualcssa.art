@@ -25,7 +25,7 @@
 
 <!-- Utilities -->
       <a-sky color="black"></a-sky>
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 2" far="1000" fov="90">
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 0" far="1000" fov="90">
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
@@ -35,11 +35,11 @@
 
 <!-- Exhibits -->
       <!-- 11 -->
-      <a-entity id="11" rotation="0 45 0">
-        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="" play-on-window-click></a-video>
-        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 90 0" play-on-window-click></a-video>
-        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 180 0" play-on-window-click></a-video>
-        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 0" rotation="0 270 0" play-on-window-click></a-video>
+      <a-entity id="11" position="0 2 0" rotation="0 0 0" scale="0.5 0.5 0.5">
+        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 8" rotation="" material="side: back" play-on-window-click></a-video>
+        <a-video src="#Miss_Loss" width="16" height="9" position="8 0 0" rotation="0 90 0" material="side: back" play-on-window-click></a-video>
+        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 -8" rotation="0 180 0" material="side: back" play-on-window-click></a-video>
+        <a-video src="#Miss_Loss" width="16" height="9" position="-8 0 0" rotation="0 270 0" material="side: back" play-on-window-click></a-video>
       </a-entity>
 <!-- Scene -->
       <a-entity position="0 0 16" mixin="rect"></a-entity>
