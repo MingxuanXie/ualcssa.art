@@ -250,8 +250,8 @@
           "index": 0,
           "texCoord": 0
         },
-        "metallicFactor": 0.69496685169880101,
-        "roughnessFactor": 0.30503314830119899
+        "metallicFactor": 0.3,
+        "roughnessFactor": 0.0
       }
     }
   ],

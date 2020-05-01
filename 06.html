@@ -18,7 +18,10 @@
       <a-assets>
       <!-- 06 -->
         <a-asset-item id="06" src="./asset/06/gltf/scene.gltf"></a-asset-item>
-        <img id="06-1" src="./asset/06/chentingting_contemporary couples-separately-together-1.jpg" alt="">
+        <img id="06-1" src="./asset/06/chentingting_contemporary_couples-separately-together-1.jpg" alt="">
+        <img id="06-2" src="./asset/06/chentingting_contemporary_couples-separately-together-2.jpg" alt="">
+        <img id="06-3" src="./asset/06/chentingting_contemporary_couples-separately-together-3.jpg" alt="">
+
 
       <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
@@ -26,27 +29,31 @@
 
 <!-- Utilities -->
       <a-sky color="black"></a-sky>
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 5" far="1000" fov="90"></a-camera>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 5" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
     <a-entity position="-2.81168 5.20216 4.26587" light="type: point; castShadow: true" visible=""></a-entity>
     <a-entity position="2.61291 4.63362 2.6668" light="type: point; castShadow: true" visible=""></a-entity>
-    <a-entity light="type: ambient; color: #ffffff; intensity: 0.8" visible=""></a-entity>
+    <a-entity light="type: ambient; color: #ffffff; intensity: 0.4" visible=""></a-entity>
 
 <!-- Exhibits -->
     <!-- 06 -->
-    <a-entity gltf-model="./asset/06/gltf/scene.gltf" position="" rotation=""  scale="0.34675 0.34675 0.34675"> </a-entity>
-    <a-image src="#06-1" position="0 4 -4" scale="8 8 8" material="" geometry=""></a-image>
+    <a-entity id="06model" gltf-model="./asset/06/gltf/scene.gltf" position="-0.0176 1.59369 0.00506" rotation="30.828567124809073 0 0"  scale="0.03596 0.03596 0.03596"></a-entity>
+    <a-cylinder id="06stand" position="0 0.75 0" geometry="height: 1.5; radius: 0.3" color="#888888"></a-cylinder>
+    <a-image id="06img1" src="#06-1" position="0 2.27266 -4" scale="5 5 8" width="1.024" height="0.842" material="" geometry=""></a-image>
+    <a-image id="06img2"src="#06-2" position="5.07969 4 -2.12589" scale="3 3 3" width="1.024" height="0.768" material="" geometry=""></a-image>
+    <a-image id="06img3"src="#06-3" position="-5.02796 4 -1.73192" scale="3 3 3" width="1.024" height="0.768" material="" geometry=""></a-image>
+
 
 <!-- Scene -->
-      <!-- <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 16" mixin="rect"></a-entity>
       <a-entity position="0 0 8" mixin="rect"></a-entity>
       <a-entity position="0 0 2" mixin="rect"></a-entity>
       <a-entity position="0 0 0" mixin="rect"></a-entity>
       <a-entity position="0 0 -2" mixin="rect"></a-entity>
       <a-entity position="0 0 -8" mixin="rect"></a-entity>
-      <a-entity position="0 0 -16" mixin="rect"></a-entity> -->
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
     </a-scene>
   </body>
 </html>
