@@ -1,4 +1,4 @@
-<!-- Design and built by vrch.tech using aframe.io -->
+<!-- Design and built by Mingxuan Xie from vrch.tech, using aframe.io -->
 
 <!DOCTYPE html>
 <html>
@@ -20,8 +20,8 @@
   <body>
 
 <!-- Aframe -->
-    <!-- <a-scene vr-mode-ui="enabled: false" wasd-control fog="type: exponential; color: #ff0088; density: 0.15">  -->
-    <a-scene vr-mode-ui="enabled: false" wasd-control> 
+    <a-scene fog="type: exponential; color: #ff0088; density: 0.15" loading-screen="dotsColor: white; backgroundColor: black" vr-mode-ui="enabled: false" wasd-control > 
+    <!-- <a-scene vr-mode-ui="enabled: false" loading-screen="dotsColor: white; backgroundColor: black" wasd-control>  -->
 
 <!-- Assets -->
       <a-assets>
@@ -29,31 +29,48 @@
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
 <!-- System -->
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -90" animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" position="0 2 2" far="1000" fov="90">
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -90"  position="0 1.6 2" far="1000" fov="90">
+        <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
+
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
-      <a-entity light="type: directional; color: #EEE; intensity: 2" position="-1 1 2"></a-entity>
-      <a-entity light="type: ambient; color: #ffffff; intensity: 0.25"></a-entity>
-
-<!-- Links -->
-      <!-- <a-link href="https://mingxuan.fun/" title="Mingxuan Xie" image="#Mingxuan" position="0 1.5 50"></a-link> -->
-
-<!-- Exhibits -->
-      <!-- <a-box scale="10 1 10" mirror></a-box> -->
+      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 2"></a-entity>
+      <a-entity light="type: ambient; color: white; intensity: 0.5"></a-entity>
 
 <!-- Scene -->
+
+      <a-curvedimage id="curimg01" material="side: back; shader: standard" position="0 0.68905 0"></a-curvedimage>
+      <a-ring id="ring01" material="shader: standard" position="-1.49646 2.60045 -1.15899" ></a-ring>
+      <a-circle id="circle01" material="wireframe: false" geometry="skipCache: false; primitive: ring; radius: 0.1; radiusOuter: 1; radiusInner: 0.99" position="-2.16461 1.23744 0.17115" color="#CCC" radius="1"></a-circle>
+      <a-sphere id="sphere01" geometry="phiLength: 120" material="side: back" rotation="-33.77586202296203 -132.78583381054395 40.73558036041614" position="1.53188 2.49337 0.49923" phi-length="270"></a-sphere>
+      <a-sphere id="sphere02" geometry="thetaLength: 125" material="side: back" position="0.55103 0.56238 0"></a-sphere>
+
+      <!-- Under Water -->
+      <a-entity scale="1 -1 1">
+        <a-curvedimage id="curimg01" material="side: back; shader: standard" position="0 0.68905 0"></a-curvedimage>
+        <a-ring id="ring01" material="shader: standard" position="-1.49646 2.60045 -1.15899" ></a-ring>
+        <a-circle id="circle01" material="wireframe: false" geometry="skipCache: false; primitive: ring; radius: 0.1; radiusOuter: 1; radiusInner: 0.99" position="-2.16461 1.23744 0.17115" color="#CCC" radius="1"></a-circle>
+        <a-sphere id="sphere01" geometry="phiLength: 120" material="side: back" rotation="8.868240753034882 -124.85094130577718 7.3796964012850035" position="0.69844 2.49337 0.49923" phi-length="270"></a-sphere>
+        <a-sphere id="sphere02" geometry="thetaLength: 125" material="side: back" position="0.55103 0.56238 0"></a-sphere>
+      </a-entity>
+
+      <a-plane id="ground" geometry="height: 1000; width: 1000; primitive: circle; radius: 50" height="100" width="100" rotation="-90 0 0" material="; transparent: true; wireframe: false; roughness: 0; opacity: 0.5; metalness: 0.31; blending: multiply; color: blue; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: front"></a-plane>
       <a-sky color="black"></a-sky>
-      <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <!-- <a-entity position="0 0 16" mixin="rect"></a-entity>
       <a-entity position="0 0 8" mixin="rect"></a-entity>
       <a-entity position="0 0 2" mixin="rect"></a-entity>
       <a-entity position="0 0 0" mixin="rect"></a-entity>
       <a-entity position="0 0 -2" mixin="rect"></a-entity>
       <a-entity position="0 0 -8" mixin="rect"></a-entity>
       <a-entity position="0 0 -16" mixin="rect"></a-entity>
-      <a-ocean  opacity="0.5" depth="10" width="10" mirror></a-ocean>
+      <a-ocean  opacity="0.5" depth="10" width="10" mirror></a-ocean> -->
+
+<!-- Exhibits -->
+      <!-- <a-box scale="10 1 10" mirror></a-box> -->
+      
     </a-scene>
   </body>
 </html>
