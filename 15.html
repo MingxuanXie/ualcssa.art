@@ -17,14 +17,15 @@
 <!-- Assets -->
       <a-assets>
       <!-- 15 -->
-        <a-asset-item id="15" src="./asset/15/gltf/scene.gltf"></a-asset-item>
+        <a-asset-item id="15-1" src="./asset/15/tyspeaking/scene.gltf"></a-asset-item>
+        <a-asset-item id="15-2" src="./asset/15/shut_up/scene.gltf"></a-asset-item>
       <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
 
 <!-- Utilities -->
       <a-sky color="black"></a-sky>
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 3" far="1000" fov="90"></a-camera>
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 1.65 3" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
@@ -33,9 +34,14 @@
 
 <!-- Exhibits -->
       <!-- 15 -->
-      <a-box color="#222" height="3" width="3" depth="0.5" position="0 2 0" rotation="0 0 0"  material="roughness: 1" geometry="">
-        <a-entity gltf-model="#15" position="0.05 0 0.2" scale="0.25 0.25 0.25" rotation="90 -2 0"></a-entity>
-      </a-box>
+      <a-entity id="15exhibit1" position="0 0.4 0">
+        <a-entity id="15model1" gltf-model="#15-1" position="0.09273 1.9821 0.07917" scale="0.23255 0.23255 0.23255" rotation="90 -2 0"></a-entity>
+        <a-cylinder id="15stand1" geometry="radius: 1.5" height="0.3" position="0 2 0" rotation="90 0 0" color="#000022" material="roughness: 1"></a-cylinder> 
+      </a-entity>
+      <a-entity id="15exhibit2">
+        <a-entity id="15model2" geometry="height: 1.2; radius: 0.6" gltf-model="#15-2" position="0.00929 1.215 1.522" scale="1.00038 1.00038 1.00038" rotation="0 0 0"></a-entity>
+        <a-cylinder id="15stand2" height="0.3" geometry="radius: 0.5; height: 1.2" height="1" position="0 0.6 1.5" rotation="0 0 0" color="#220000" material="roughness: 1"></a-cylinder> 
+      </a-entity>
 
 <!-- Scene -->
       <a-entity position="0 0 16" mixin="rect"></a-entity>
