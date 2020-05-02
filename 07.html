@@ -19,6 +19,7 @@
       <!-- 07 -->
         <img id="the-spectator" src="./asset/07/The_Spectator.jpg">
         <img id="07-ins" src="./asset/07/The_Instagram_Account_(2020).jpg">
+        <img id="07-list" src="./asset/07/list.png">
         <audio id="the-whistler" src="./asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio>
       <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
@@ -26,7 +27,7 @@
 
 <!-- Utilities -->
       <a-sky color="black"></a-sky>
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -90" position="0 2 2" far="1000" fov="90">
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -90" position="0 2 2" far="1000" fov="75">
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
@@ -37,11 +38,11 @@
 
 <!-- Exhibits -->
       <!-- 07 -->
-      <a-entity id="07" rotation="0 0 -25" position="0 2 -2">
+      <a-entity id="07earth" rotation="0 0 -25" position="0 2 -2">
         <a-sphere radius="2" material="src: #the-spectator; color: #696969; roughness: 0.5; metalness: 0; side: double" animation="property: rotation; to: 0 -360 0; dur: 20000; easing: linear; loop: true"></a-sphere>
         <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: inverse; rolloffFactor: 2;"></a-entity>
       </a-entity>
-      <a-entity position="0 0 0" text="baseline: top;width: 4; wrapCount: 100; value: 
+      <!-- <a-entity position="0 0 0" text="baseline: top;width: 4; wrapCount: 100; value: 
       08/03/2020 Permanent Collection, Mudam Luxembourg Museum.
       08/03/2020 Rachel Maclean, I’m Terribly Sorry, Casino Luxembourg. 
       08/03/2020 Sophie Jung, They Might Stay the night, Casino Luxembourg. 
@@ -182,8 +183,9 @@
       09/02/2019 Tracey Emin, White Cube. 
       24/01/2019 Liu XiaoDong, Weight of insomnia, Lissen Gallery. 
       09/01/2019 禹步 PROREGRESS: Art in an age of historical ambivalence, Chief Curator: Cuauhtémoc Medina,12th Shanghai Biennale, Power Station of Art, 上海当代艺术博物馆.
-      ;" animation="property: position; to: 0 15 0; dur: 40000; easing: linear; loop: true;"></a-entity>
-      <a-image src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="2.62392 2 0"></a-image>
+      ;" animation="property: position; to: 0 15 0; dur: 40000; easing: linear; loop: true;"></a-entity> -->
+      <a-curvedimage id="07list" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" rotation="0 0 90" position="0 2 -2" material="side: double;" scale="1 1 -1" animation="property: rotation; from: 0 0 90; to: -360 0 90; dur: 40000; easing: linear; loop: true"></a-curvedimage>
+      <a-image id="07ins" src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="2.62392 2 0"></a-image>
 
 <!-- Scene -->
       <a-entity position="0 0 16" mixin="rect"></a-entity>

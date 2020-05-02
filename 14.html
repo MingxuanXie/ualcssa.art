@@ -29,7 +29,7 @@
 
 <!-- Utilities -->
       <a-sky color="black"></a-sky>
-      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 5" far="1000" fov="90">
+      <a-camera twoway-motion="nonMobileLoad: true; speed: 25; threshold: -15" position="0 2 5" far="1000" fov="75">
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
@@ -39,16 +39,16 @@
 
 <!-- Exhibits -->
       <!-- 14 -->
-      <a-entity position="-0.25715 2 -0.80919" geometry="primitive: plane; width: 1.6; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_1.gif)"></a-entity>
-      <a-entity position="-2.05747 2 -0.19115" geometry="primitive: plane; width: 2; height: 2" material="shader: gif; src: url(./asset/14/Great_Harmony_2.gif)"></a-entity>
-      <a-image position="-1.76969 0 1.46762" scale="3 3 3" width="0.45" height="1.45" src="#14-3" material="" geometry=""></a-image>
-      <a-entity position="2.71832 0.71133 -1.25902" geometry="primitive: plane; width: 2.4; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_4.gif)"></a-entity>
-      <a-image position="1.80199 0 2.03629" scale="3 3 3" width="0.512" height="1.536" src="#14-5" material="" geometry=""></a-image>
-      <a-entity position="4.14377 2 1.94078" geometry="primitive: plane; width: 1.6; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_6.gif)"></a-entity>
-      <a-entity position="-3.99179 2 1.62177" geometry="primitive: plane; width: 2.4; height: 4.8" material="shader: gif; src: url(./asset/14/Great_Harmony_7.gif)"></a-entity>
-      <a-image position="-0.64679 -0.51098 2.69494" width="2" height="2" src="#14-8" material="" geometry=""></a-image>
-      <a-entity position="0 2 1.18261" geometry="primitive: plane; width: 2; height: 2" material="shader: gif; src: url(./asset/14/Great_Harmony_9.gif)"></a-entity>
-      <a-image position="-4.44467 0 2.88895" scale="3 3 3" width="0.512" height="1.526" src="#14-10" material="" geometry=""></a-image>
+      <a-entity id="14img1" position="-0.82697 2 -1.33416" geometry="primitive: box; width: 1.6; height: 4.8; depth: 1.6" material="shader: gif; src: url(./asset/14/Great_Harmony_1.gif)"></a-entity>
+      <a-entity id="14img2" position="-2.39888 3.17691 0.36178" geometry="primitive: box; width: 1; height: 1; depth: 1" material="shader: gif; src: url(./asset/14/Great_Harmony_2.gif)"></a-entity>
+      <a-entity id="14img3" position="2.30441 0 0.10871"  geometry="primitive: box; width: 2; height: 2; depth: 2" material="src: #14-3; shader: flat;"></a-entity>
+      <a-entity id="14img4" scale="0.5 0.5 0.5" position="1.48044 3.29814 -0.0381" geometry="primitive: box; width: 2.4; height: 4.8; depth: 2.4" material="shader: gif; src: url(./asset/14/Great_Harmony_4.gif)"></a-entity>
+      <a-entity id="14img5" position="1.23505 0.62399 2.21336" scale="3 3 3" geometry="primitive: box; width: 0.512; height: 1.536; depth: 0.512" material="src: #14-5; shader: flat;"></a-entity>
+      <a-entity id="14img6" position="4.22565 1.75337 1.94078" geometry="primitive: box; width: 1.6; height: 4.8; depth: 1.6" material="shader: gif; src: url(./asset/14/Great_Harmony_6.gif)"></a-entity>
+      <a-entity id="14img7" scale="0.5 0.5 0.5" position="-3.71111 2 1.12571" geometry="primitive: box; width: 2.4; height: 4.8; depth: 2.4" material="shader: gif; src: url(./asset/14/Great_Harmony_7.gif)"></a-entity>
+      <a-entity id="14img8" position="-4.12924 -0.51098 2.50734" geometry="primitive: box; width: 2; height: 2; depth: 2" material="src: #14-8; shader: flat;"></a-entity>
+      <a-entity id="14img9" position="-0.75681 -0.01123 1.54269" geometry="primitive: box; width: 2; height: 2; depth: 2" material="shader: gif; src: url(./asset/14/Great_Harmony_9.gif)"></a-entity>
+      <a-entity id="14img10" position="-2.47045 0.95902 2.0503" scale="2 2 2" geometry="primitive: box; width: 0.512; height: 1.526; depth: 0.512" material="src: #14-10; shader: flat;"></a-entity>
 
 <!-- Scene -->
       <a-entity position="0 0 16" mixin="rect"></a-entity>
