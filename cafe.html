@@ -1,0 +1,102 @@
+<!-- Design and built by Mingxuan Xie from vrch.tech, using aframe.io -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Post Mass Media Exhibition [Cafe Area]</title>
+    <script src="./js/aframe.min.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> -->
+    <script src="./js/hyper-move.js"></script>
+    <script src="./js/twoway-motion.js"></script>
+    <script src="./js/aframe-extras.min.js"></script>
+    <script src="./js/aframe-gif-shader.min.js"></script>
+    <script src="./js/video-handler.js"></script>
+    <!-- <script src="./js/video-handler-11.js"></script> -->
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="./js/aframe-look-at-component.min.js"></script>
+    <!-- <script src="./js/play-on-window-click.js"></script> -->
+    <!-- <script src="./js/noise.js"></script> POOL PERFORMANCE ON PHONES -->
+    <!-- <script src="./js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
+    <!-- <script src="./js/click-url.js"></script> -->
+    <!-- <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> -->
+  </head>
+  <body>
+
+<!-- Aframe -->
+    <a-scene background="color: #000084" fog="type: exponential; color: magenta; density: 0.1" loading-screen="dotsColor: white; backgroundColor: blue" vr-mode-ui="enabled: false" wasd-control> 
+    <!-- <a-scene vr-mode-ui="enabled: false" background="color: #ff0066" loading-screen="dotsColor: white; backgroundColor: black" wasd-control>  -->
+
+<!-- Assets -->
+      <a-assets>
+        <video id="03" autoplay muted="true" loop="true" src="./asset/03/little_red_music_restaurant.mp4"></video>
+        <!-- Vrch -->
+        <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
+      </a-assets>
+
+<!-- Template -->
+      <!-- Stand -->
+      <!-- <a-circle id="stand" geometry="segments: 36" material="blending: normal; wireframe: false; transparent: false; color: #ffffff; depthTest: true" scale="0.5 0.5 0.5" position="-0.01276 1 1.49386" rotation="-90 0 0"><a-sphere id="stand-base" material="blending: none" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle> -->
+      <!-- Hoovered Text -->
+      <!-- <a-box scale="10 10 10" visible="false" event-set__makevisible="_event: mouseenter; visible: true" event-set__leave="_event: mouseleave; visible: false"></a-box> -->
+
+<!-- Exhibits -->
+      <!-- 03 -->
+      <a-cylinder id="cafe-video01" rotation="0 -165.17 0" position="-0.84149 3.25 0.98873" scale="-1.633 1.633 1.633" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 120" material="src: #03; side: back; fog: false;" video-handler></a-cylinder>
+      <a-entity scale="1 -1 1">
+        <a-cylinder id="cafe-video01" rotation="0 -165.17 0" position="-0.84149 3.25 0.98873" scale="-1.633 1.633 1.633" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 120" material="src: #03; side: back; fog: false;"></a-cylinder>
+      </a-entity>
+      <!-- <a-curvedimage id="cafe-video01" geometry="thetaLength: 360; height: 3; radius: 4" material="src: #03; side: back;" position="0 2.76214 0" video-handler></a-curvedimage> -->
+      <!-- <a-video src="#03" width="16" height="9" position="0 2 0" rotation="" video-handler></a-video> -->
+
+<!-- System -->
+      <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
+        <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
+        <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
+      </a-camera>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<!-- Lights -->
+      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 2"></a-entity>
+      <a-entity light="type: ambient; color: white; intensity: 0.5"></a-entity>
+
+<!-- Scene -->
+      <!-- Environment -->
+      <!-- <a-sky id="sky"color="cyan"></a-sky> -->
+      <a-plane id="virtual-ground" position="0 0 0" geometry="primitive: circle; radius: 50" height="100" width="100" rotation="89.99963750135457 0 0" material="transparent: true; roughness: 0; blending: multiply; color: magenta; side: double"></a-plane>
+ 
+      <!-- Vrch -->
+      <a-sphere id="cafe-sphere01" geometry="phiLength: 360; radius: 10; thetaStart: 15; thetaLength: 150" material="side: back; transparent: false; blending: additive; fog: false" rotation="-89.99963750135457 43.15174338248282 0" position="0 0 0" phi-length="270"></a-sphere>
+      <a-circle id="chair01" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-4.96515 0.5 -1.00801" rotation="-90 0 0"><a-sphere id="chair-base01" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair02" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="1.0674 0.5 6.87127" rotation="-90 0 0"><a-sphere id="chair-base02" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair03" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-6.15882 0.5 2.39018" rotation="-90 0 0"><a-sphere id="chair-base03" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair04" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-0.71823 0.5 -3.3709" rotation="-90 0 0"><a-sphere id="chair-base04" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair05" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="0.8471 0.5 -0.91449" rotation="-90 0 0"><a-sphere id="chair-base05" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair06" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-2.66911 0.5 5.48969" rotation="-90 0 0"><a-sphere id="chair-base06" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair07" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-2.38535 0.5 1.53206" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair08" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="4.04634 0.5 3.22664" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      <a-circle id="chair09" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="0.737 0.5 3.0052" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+      
+      <!-- Vrch Mirror -->
+      <a-entity scale="1 -1 1">
+        <a-circle id="chair01" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-4.96515 0.5 -1.00801" rotation="-90 0 0"><a-sphere id="chair-base01" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair02" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="1.0674 0.5 6.87127" rotation="-90 0 0"><a-sphere id="chair-base02" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair03" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-6.15882 0.5 2.39018" rotation="-90 0 0"><a-sphere id="chair-base03" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair04" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-0.71823 0.5 -3.3709" rotation="-90 0 0"><a-sphere id="chair-base04" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair05" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="0.8471 0.5 -0.91449" rotation="-90 0 0"><a-sphere id="chair-base05" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair06" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-2.66911 0.5 5.48969" rotation="-90 0 0"><a-sphere id="chair-base06" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair07" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="-2.38535 0.5 1.53206" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair08" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="4.04634 0.5 3.22664" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="chair09" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="0.737 0.5 3.0052" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>  
+      </a-entity>
+
+      <!-- <a-entity position="0 0 16" mixin="rect"></a-entity>
+      <a-entity position="0 0 8" mixin="rect"></a-entity>
+      <a-entity position="0 0 2" mixin="rect"></a-entity>
+      <a-entity position="0 0 0" mixin="rect"></a-entity>
+      <a-entity position="0 0 -2" mixin="rect"></a-entity>
+      <a-entity position="0 0 -8" mixin="rect"></a-entity>
+      <a-entity position="0 0 -16" mixin="rect"></a-entity>
+      <a-ocean  opacity="0.5" depth="10" width="10" mirror></a-ocean> -->
+    </a-scene>
+  </body>
+</html>
