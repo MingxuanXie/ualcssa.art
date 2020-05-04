@@ -87,10 +87,10 @@
         <a-entity rotation="0 40.57171443100872 0">
           <a-entity id="07earth" rotation="0 0 -25" position="0 2 -2">
             <a-sphere radius="2" material="src: #the-spectator; color: #696969; roughness: 0.5; metalness: 0; side: double" animation="property: rotation; to: 0 -360 0; dur: 20000; easing: linear; loop: true"></a-sphere>
-            <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: inverse; rolloffFactor: 2;"></a-entity>
+            <a-curvedimage id="07list" position="0 0.5 0" scale="1 -1 1" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" material="side: double;; blending: additive" animation="property: rotation; to: 0 360 0; dur: 40000; easing: linear; loop: true"></a-curvedimage>
           </a-entity>
-          <a-curvedimage id="07list" rotation="0 0 90" position="0 2 -2" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" material="side: double;; blending: additive" scale="1 1 -1" animation="property: rotation; from: 0 0 90; to: -360 0 90; dur: 40000; easing: linear; loop: true"></a-curvedimage>
-          <a-image id="07ins" src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="2.62392 2 0"></a-image>
+          <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: inverse; rolloffFactor: 2;"></a-entity>
+          <a-image id="07ins" src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="0 2 -2"></a-image>
         </a-entity>
       </a-entity>
       <!-- 09 -->
