@@ -29,6 +29,7 @@
 <!-- Assets -->
       <a-assets>
         <video id="03" autoplay muted="true" loop="true" src="./asset/03/little_red_music_restaurant.mp4"></video>
+        <img id="lighttex" src="./asset/lightball.png">
         <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
@@ -45,8 +46,6 @@
       <a-entity scale="1 -1 1">
         <a-cylinder id="cafe-video01" rotation="0 -165.17 0" position="-0.84149 3.25 0.98873" scale="-1.633 1.633 1.633" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 120" material="src: #03; side: back; fog: false;"></a-cylinder>
       </a-entity>
-      <!-- <a-curvedimage id="cafe-video01" geometry="thetaLength: 360; height: 3; radius: 4" material="src: #03; side: back;" position="0 2.76214 0" video-handler></a-curvedimage> -->
-      <!-- <a-video src="#03" width="16" height="9" position="0 2 0" rotation="" video-handler></a-video> -->
 
 <!-- System -->
       <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
@@ -88,15 +87,6 @@
         <a-circle id="chair08" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="4.04634 0.5 3.22664" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
         <a-circle id="chair09" geometry="segments: 36" material="blending: normal; transparent: false; color: #ffffff" scale="0.5 0.5 0.5" position="0.737 0.5 3.0052" rotation="-90 0 0"><a-sphere id="chair-base07" material="" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>  
       </a-entity>
-
-      <!-- <a-entity position="0 0 16" mixin="rect"></a-entity>
-      <a-entity position="0 0 8" mixin="rect"></a-entity>
-      <a-entity position="0 0 2" mixin="rect"></a-entity>
-      <a-entity position="0 0 0" mixin="rect"></a-entity>
-      <a-entity position="0 0 -2" mixin="rect"></a-entity>
-      <a-entity position="0 0 -8" mixin="rect"></a-entity>
-      <a-entity position="0 0 -16" mixin="rect"></a-entity>
-      <a-ocean  opacity="0.5" depth="10" width="10" mirror></a-ocean> -->
     </a-scene>
   </body>
 </html>

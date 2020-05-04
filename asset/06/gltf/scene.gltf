@@ -232,7 +232,7 @@
   ],
   "materials": [
     {
-      "doubleSided": true,
+      "doubleSided": false,
       "emissiveFactor": [
         0,
         0,
@@ -250,7 +250,7 @@
           "index": 0,
           "texCoord": 0
         },
-        "metallicFactor": 0.3,
+        "metallicFactor": 0.1,
         "roughnessFactor": 0.0
       }
     }
