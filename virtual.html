@@ -11,7 +11,7 @@
     <script src="./js/twoway-motion.js"></script>
     <script src="./js/aframe-extras.min.js"></script>
     <script src="./js/aframe-gif-shader.min.js"></script>
-    <!-- <script src="./js/video-handler.js"></script> -->
+    <script src="./js/video-handler.js"></script>
     <!-- <script src="./js/video-handler-11.js"></script> -->
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="./js/aframe-look-at-component.min.js"></script>
@@ -63,8 +63,7 @@
       <!-- 08 assets -->
       <video id="08" autoplay muted="true" loop="true" src="./asset/08/GU-_ITERATING_-_Effie_Gu.mp4"></video>
       <!-- 10 assets -->
-      <!-- <img id="10-1" src="./asset/10/Hannah-Lost_in_Small_Print_-_hannah_Zhu.jpg"> -->
-      <video id="10-2" autoplay muted="true" loop="true" src="./asset/10/pre-video-Lost-in-Small-Print.mp4"></video>
+      <video id="10" autoplay muted="true" loop="true" src="./asset/10/pre-video-Lost-in-Small-Print.mp4"></video>
       <!-- 13 assets -->
       <a-asset-item id="13" src="./asset/13/gltf/scene.gltf"></a-asset-item>
       <!-- 14 assets -->
@@ -127,12 +126,12 @@
         <a-image src="#05-28" width="0.45" height="1.45" opacity="0.95" position="0.0353 2 -0.02496" material="" geometry=""></a-image>
       </a-entity>
       <!-- 08 -->
-      <a-entity id="08exhibit" scale="0.7021 0.7021 0.7021" position="-0.41618 1.81541 -16.53079">
-        <a-video src="#08" width="16" height="9" position="0 0 0" rotation="" video-handler></a-video>
+      <a-entity id="08exhibit" scale="0.75 0.75 0.75" position="-0.5 3.3 -15.77749">
+        <a-video src="#08" width="16" height="9" position="0 0 0" rotation="" material="fog: false" video-handler></a-video>
       </a-entity>
       <!-- 10 -->
-      <a-entity id="10exhibit" rotation="0 63.16859691317326 0" position="-17.78608 0 -5.4788">
-        <a-video src="#10-2" width="6.4" height="2.4" position="0 2 0" rotation="" video-handler></a-video>
+      <a-entity id="10exhibit" rotation="0 63.16859691317326 0" position="-17.78608 2 -5.4788">
+        <a-video src="#10" width="6.4" height="2.4" position="0 0 0" rotation="" material="fog: false" video-handler></a-video>
       </a-entity>
       <!-- 13 -->
       <a-entity id="13exhibit" rotation="0 14.125128523360186 0" position="-12.57424 0 -10.81953">
@@ -164,7 +163,7 @@
 
 
 <!-- System -->
-      <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
+      <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 100; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
         <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
       </a-camera>
