@@ -88,8 +88,8 @@
 <!-- Exhibits -->
       <!-- 02 -->
       <a-entity id="02exhibit" rotation="0 -49.52303406433757 0" position="9.7251 0 3.68094">
-        <a-entity position="-3.93757 3.48143 1.17389" light="type: spot; castShadow: true; angle: 30; distance: 8; intensity: 2"></a-entity>
-        <a-entity position="3.48867 3.77907 1.61841" light="type: spot; castShadow: true; angle: 30; distance: 8; intensity: 2"></a-entity>
+        <a-entity id="02light1" rotation="-30.06596029948995 49.820399160010474 20.75482317081894" position="2.90614 3.94316 1.5346" light="type: spot; castShadow: true; angle: 30; distance: 6; intensity: 3"></a-entity>
+        <a-entity id="02light2" rotation="-34.35454939604416 -62.01695174496031 -23.20307182941295" position="-3.09058 3.9875 0.71963" light="type: spot; castShadow: true; angle: 30; distance: 6; intensity: 3"></a-entity>
         <a-entity gltf-model="#02" position="0 2 0.05" rotation="90 0 0" shadow="receive: false; cast: true"> </a-entity>
         <a-plane color="grey" position="0 2 0.001"  rotation="3 0 0" height="1.7" width="2.10" shadow="cast: false" material="roughness: 1" geometry=""></a-plane>
         <a-plane color="grey" position="0 2 0" rotation="3 0 0" height="3" width="4" material="roughness: 1" geometry=""></a-plane>
@@ -163,7 +163,7 @@
 
 
 <!-- System -->
-      <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 100; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
+      <a-camera id="player" twoway-motion="nonMobileLoad: false; speed: 100; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
         <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
       </a-camera>
