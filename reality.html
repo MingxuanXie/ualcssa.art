@@ -40,19 +40,22 @@
         <img id="the-spectator" src="./asset/07/The_Spectator.jpg">
         <img id="07-ins" src="./asset/07/The_Instagram_Account_(2020).jpg">
         <img id="07-list" src="./asset/07/list.png">
-        <audio id="the-whistler" src="./asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio>
+        <!-- <audio id="the-whistler" src="./asset/07/The_whistler_in_the_gallery.mp3" preload="auto"></audio> -->
         <!-- 09 assets -->
         <img id="09-1" src="./asset/09/1_-_Liu_Lorna.jpg">
         <img id="09-2" src="./asset/09/2_-_Liu_Lorna.jpg">
         <img id="09-3" src="./asset/09/3_-_Liu_Lorna.jpg">
         <img id="09-4" src="./asset/09/4_-_Liu_Lorna.jpg">
         <!-- 11 assets -->
-        <video id="Miss_Loss" autoplay muted="true" loop="true" src="./asset/11/Qi_Sun(Keyki)-Miss_Loss_-_Qi_Sun.mp4"></video>
+        <!-- <video id="Miss_Loss" autoplay muted="true" loop="true" src="./asset/11/Qi_Sun(Keyki)-Miss_Loss_-_Qi_Sun.mp4"></video> -->
         <!-- 12 assets -->
-        <video id="12" autoplay muted="true" loop="true" src="./asset/12/WANG_and_Cammy_Filmtons_Secret.mp4"></video>
+        <!-- <video id="12" autoplay muted="true" loop="true" src="./asset/12/WANG_and_Cammy_Filmtons_Secret.mp4"></video> -->
         <!-- 15 assets -->
         <a-asset-item id="15-1" src="./asset/15/tyspeaking/scene.gltf"></a-asset-item>
         <a-asset-item id="15-2" src="./asset/15/shut_up/scene.gltf"></a-asset-item>
+        <!-- Exhibition Statement -->
+        <a-asset-item id="billboard" src="./asset/billboard/scene.gltf"></a-asset-item>
+        <img id="statement-text" src="./asset/statement.jpg" alt="">
         <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
@@ -66,7 +69,7 @@
 <!-- Exhibits -->
 
       <!-- 04 -->
-      <a-entity id="04preview" position="-14.37022 3.52732 -8.88335" rotation="17.400728238123104 39.923699164715764 -0.2503825564721697" geometry="primitive: plane; width: 8; height: 4.5; depth: 2.4" material="shader: gif; src: url(./asset/04/preview.gif)"></a-entity>
+      <a-entity id="04preview" position="-14.37022 3.52732 -8.88335" rotation="17.400728238123104 39.92369916471577 -0.2503825564721697" geometry="primitive: plane; width: 8; height: 4.5; depth: 2.4" material="shader: gif; src: url(./asset/04/preview.gif)"></a-entity>
       <!-- <a-video id="04exhibit" geometry="primitive: plane" src="#04" width="8" height="4.5" position="-14.37022 3.52732 -8.88335" rotation="17.400728238123104 39.923699164715764 -0.2503825564721697" material="side: front" video-handler></a-video> -->
 
       <!-- 06 -->
@@ -110,15 +113,15 @@
       <!-- 12 -->
       <a-video id="12exhibit" scale="0.41082 0.41082 0.41082" src="#12" width="8" height="4.5" position="9.63883 2 3.81664" rotation="0 -30.01152930895252 0" material="side: front" video-handler></a-video>
       <!-- 15 -->
-      <a-entity id="15exhibit1" position="0 0.4 0">
-        <a-entity id="15model1" gltf-model="./asset/15/tyspeaking/scene.gltf" position="0.09273 1.9821 -0.02606" scale="0.23255 0.23255 0.23255" rotation="90 -0.5 0"></a-entity>
+      <a-entity id="15exhibit1" position="0 0.4 -11.64416">
+        <a-entity id="15model1" gltf-model="#15-1" position="0.09273 1.9821 -0.02606" scale="0.23255 0.23255 0.23255" rotation="90 -0.5 0"></a-entity>
         <a-cylinder id="15stand1" geometry="radius: 1.5" height="0.3" position="0 2 0.00609" rotation="90 0 0" color="#000022" material="roughness: 1; blending: normal; transparent: false; color: #ffffff; opacity: 1; flatShading: false; shader: standard; side: front; fog: true"></a-cylinder> 
       </a-entity>
-      <a-entity id="15exhibit2">
+      <a-entity id="15exhibit2" position="0 0 -11.57495">
         <a-entity id="15model2" geometry="height: 1.2; radius: 0.6" gltf-model="#15-2" position="-0.00412 1.17861 1.53763" scale="0.45526 0.45526 0.45526" rotation="0 0 0"></a-entity>
         <a-circle id="15stand" geometry="segments: 36" material="blending: normal; wireframe: false; transparent: false; color: #ffffff; depthTest: true" scale="0.61362 0.61362 0.61362" position="-0.01276 1.19457 1.49386" rotation="-90 0 0"><a-sphere id="15stand-base" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
       </a-entity>
-      <a-entity id="15text" rotation="2.308789794150025 0.7040447718692244 -0.028384825453797828" position="0.0223 2.07786 1.4271"
+      <!-- <a-entity id="15text" rotation="2.308789794150025 0.7040447718692244 -0.028384825453797828" position="0.0223 2.07786 1.4271"
         geometry="primitive: plane; height: 0.923; width: auto" material="visible: false"
         text="width: 1; value: Inspired by the 'freedom of speech' debate that broke out on the Internet several times during the isolation of people with new crown pneumonia. 
         It can be said that the new cultural movement of contemporary youth expresses their views on social media such as friend circles, Weibo, WeChat, etc. 
@@ -127,8 +130,13 @@
         I used 3D printed materials and old The keyboard chip parts form a 'typing hand', and the 'speak' keyboard keys are placed under five fingers, which means that the public can make their visible sound on the online social media through the keyboard.
         'The lack of real communication, the more will be in the network vent'" 
         visible="true" event-set__makevisible="_event: mouseenter; visible: true" event-set__leave="_event: mouseleave; visible: false" look-at="#player">
-      </a-entity>
-
+      </a-entity> -->
+      <!-- Exhibition Statement -->
+      <a-plane id="statement-screen" material="shader: gif; src: url(./asset/billboard/text.gif)" 
+               geometry="height: 4.8; width: 4.8" 
+               position="0 2.4 0.198"></a-plane>>
+      <a-entity id="statement-model" gltf-model="#billboard" position="0 0 0" scale="0.0035 0.0035 0.0035" rotation="0 0 0"></a-entity>
+      
 
 <!-- System -->
       <a-camera id="player" twoway-motion="nonMobileLoad: false; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
