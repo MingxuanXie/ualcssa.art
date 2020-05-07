@@ -81,11 +81,10 @@
 <!-- Scene -->
       <!-- Environment -->
       <!-- <a-sky id="sky"color="cyan"></a-sky> -->
-      <a-plane id="actual-ground" position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" material="; transparent: true; wireframe: false; roughness: 0; opacity: 0.9; metalness: 0; blending: multiply; color: blue; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"></a-plane>
       
-      <a-image id="logo" src="#logoimg" material="fog: false; alphaTest: 0.1" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
+      <a-image id="logo" src="#logoimg" material="fog: false; transparent: true; blending: normal; alphaTest: 0.1" position="0 1.375 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
       <a-entity rotation="0 0 180">
-        <a-image id="logo" src="#logoimg" material="fog: false; alphaTest: 0.1" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
+        <a-image id="logo" src="#logoimg" material="fog: false; transparent: true; blending: normal; alphaTest: 0.1" position="0 1.375 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
       </a-entity>
       
       <!-- Vrch Cafe -->
@@ -120,7 +119,7 @@
       <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: additive; fog: false" rotation="-90 0 0" position="-9.80487 0.03387 -4.28449" phi-length="270"></a-sphere>
       <a-sphere id="sphere02" rotation="0 2.635032899806656 0" geometry="thetaLength: 125; radius: 4.5; phiLength: 300" material="side: back; dithering: true; flatShading: false; transparent: true; blending: additive; visible: true; fog: false" position="8.21797 2.5 -2.06462"></a-sphere>
       <a-sphere id="sphere03" rotation="180 0 0" geometry="thetaLength: 60; radius: 3; thetaStart: 45" material="side: back; dithering: true; flatShading: false; blending: additive; fog: false" position="-11.37988 2.04172 0.94001"></a-sphere>
-      <a-sphere id="sphere04" rotation="14.999999999999998 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: additive; fog: false" position="3.16213 3.80071 -6.56453"></a-sphere>
+      <a-sphere id="sphere04" rotation="14.999999999999998 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: additive; fog: false; opacity: 0.850" position="3.16213 3.80071 -6.56453"></a-sphere>
       <a-sphere id="sphere05index" rotation="0 20 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: additive; opacity: 1; transparent: false; fog: false; color: #c0c0c0" position="0 3.39907 -0.35626"></a-sphere>
       <a-sphere id="sphere06" rotation="90 0 0" geometry="thetaLength: 180; thetaStart: 0; phiLength: 180; radius: 2" material="side: back; dithering: true; flatShading: false; blending: additive; transparent: false; fog: false" position="11.22994 2.00682 3.62453"></a-sphere>
       <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.52856 1.5 -9.31993"></a-sphere>
@@ -136,7 +135,10 @@
         <a-sphere id="sphere06" rotation="90 0 0" geometry="thetaLength: 180; thetaStart: 0; phiLength: 180; radius: 2" material="side: back; dithering: true; flatShading: false; blending: additive; transparent: false; fog: false" position="11.22994 2.00682 3.62453"></a-sphere>
         <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.52856 1.5 -9.31993"></a-sphere>
       </a-entity>
+
+      <a-plane id="actual-ground" position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" material="; transparent: true; wireframe: false; roughness: 0; opacity: 0.9; metalness: 0; blending: multiply; color: blue; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"></a-plane>
       <a-sky id="virtual-sky" material="fog: false; color: #0000a0; shader: standard; opacity: 0.85; roughness: 0.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
+
     </a-scene>
   </body>
 </html>
