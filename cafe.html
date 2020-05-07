@@ -5,19 +5,11 @@
   <head>
     <title> Post Mass Media Exhibition [Cafe Area]</title>
     <script src="./js/aframe.min.js"></script>
-    <!-- <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> -->
-    <script src="./js/hyper-move.js"></script>
-    <script src="./js/twoway-motion.js"></script>
     <script src="./js/aframe-extras.min.js"></script>
     <script src="./js/aframe-gif-shader.min.js"></script>
     <script src="./js/video-handler.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-    <script src="./js/aframe-look-at-component.min.js"></script>
     <script src="./js/click-url.js"></script>
-
-    <!-- <script src="./js/play-on-window-click.js"></script> -->
-    <!-- <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> -->
-
   </head>
   <body>
 
@@ -31,7 +23,7 @@
         <img id="lighttex" src="./asset/lightball.png">
         <!-- Vrch -->
         <img id="portalImg" src="./asset/portal.png">
-        <a-mixin id="portal" look-at="#player" material="visible: false" geometry="primitive: circle; segments: 24;" raycastable="" scale="2.5 2.5 2.5" animation__mouseenterscale="property: scale; from: 2.5 2.5 2.5; to: 2.8 2.8 2.8; easing: easeInOutQuad; dir: alternate; loop: true; startEvents: mouseenter; dur: 1000; pauseEvents: mouseleave"></a-mixin>
+        <a-mixin id="portal" material="visible: false" geometry="primitive: circle; segments: 24;" raycastable="" scale="2.5 2.5 2.5" animation__mouseenterscale="property: scale; from: 2.5 2.5 2.5; to: 2.8 2.8 2.8; easing: easeInOutQuad; dir: alternate; loop: true; startEvents: mouseenter; dur: 1000; pauseEvents: mouseleave"></a-mixin>
       </a-assets>
 
 <!-- Template -->
@@ -49,10 +41,7 @@
       </a-entity>
 
 <!-- System -->
-      <a-camera id="player" twoway-motion="nonMobileLoad: true; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
-        <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
-        <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
-      </a-camera>
+      <a-camera id="player" position="0 1.6 10" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->

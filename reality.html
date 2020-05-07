@@ -18,7 +18,7 @@
     <!-- <script src="./js/play-on-window-click.js"></script> -->
     <!-- <script src="./js/noise.js"></script> POOL PERFORMANCE ON PHONES -->
     <!-- <script src="./js/aframe-particle-system-component.min.js"></script> POOL PERFORMANCE ON PHONES -->
-    <!-- <script src="./js/click-url.js"></script> -->
+    <script src="./js/click-url-new-win.js"></script>
     <!-- <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> -->
   </head>
   <body>
@@ -30,7 +30,7 @@
 <!-- Assets -->
       <a-assets>
         <!-- 04 assets -->
-        <video id="04" autoplay muted="true" loop="true" src="./asset/04/National_Address.mp4"></video>
+        <!-- <video id="04" autoplay muted="true" loop="true" src="./asset/04/National_Address.mp4"></video> -->
         <!-- 06 assets -->
         <a-asset-item id="06" src="./asset/06/gltf/scene.gltf"></a-asset-item>
         <img id="06-1" src="./asset/06/chentingting_contemporary_couples-separately-together-1.jpg" alt="">
@@ -69,15 +69,14 @@
 <!-- Exhibits -->
 
       <!-- 04 -->
-      <a-entity id="04preview" scale="1.08104 1.08104 1.08104" position="-15.29646 3.54516 -8.16013" rotation="17.207641461164012 49.61585322714877 2.6390436043725716" geometry="primitive: plane; width: 8; height: 4.5; depth: 2.4" material="shader: gif; src: url(./asset/04/preview.gif)"></a-entity>
-      <!-- <a-video id="04exhibit" geometry="primitive: plane" src="#04" width="8" height="4.5" position="-14.37022 3.52732 -8.88335" rotation="17.400728238123104 39.923699164715764 -0.2503825564721697" material="side: front" video-handler></a-video> -->
+      <a-entity id="04preview" scale="1.08104 1.08104 1.08104" position="-15.29646 3.54516 -8.16013" rotation="17.207641461164012 49.61585322714877 0" geometry="primitive: plane; width: 8; height: 4.5; depth: 2.4" material="shader: gif; src: url(./asset/04/preview.gif)" click-url-new-win="./national-address.html"></a-entity>
 
       <!-- 06 -->
-      <a-entity id="06exhibit" rotation="0 -26.003689532012412 0" position="9.3429 0 -9.27639">
+      <a-entity id="06exhibit" rotation="0 -26.003689532012412 0" position="11.22994 0 3.62453">
         <a-entity position="0.45272 1.45845 0.24542" light="type: point; castShadow: true; distance: 1"></a-entity>
         <a-entity position="-0.44241 1.36828 0.14615" light="type: point; castShadow: true; distance: 1"></a-entity>
         <a-entity position="0.06107 1.26492 -0.2307" light="type: point; castShadow: true; distance: 1"></a-entity>
-        <a-entity id="06model" gltf-model="#06" position="-0.02453 1.143 -0.01004" rotation="0 -7.157388776774244 0"  scale="0.03596 0.03596 0.03596"></a-entity>
+        <a-entity id="06model" gltf-model="#06" position="-0.03745 1.0452 0.08267" rotation="0 -7.157388776774244 0"  scale="0.03596 0.03596 0.03596"></a-entity>
         <a-circle id="06stand" geometry="segments: 36" material="transparent: false; color: #000000" scale="0.6024 0.6024 0.6024" position="0 1 0" rotation="-90 0 0"><a-sphere id="06stand-base" material="transparent: false; color: #000000" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
         <a-image id="06img1" src="#06-1" position="0 3 0" scale="" width="1.024" height="0.842" material="transparent: false" geometry="" rotation=""></a-image>
         <a-image id="06img2" rotation="0 -45 0" src="#06-2" position="0 2 0" scale="" width="1.024" height="0.768" material="alphaTest: 1" geometry=""></a-image>
@@ -92,26 +91,26 @@
             <a-sphere radius="2" material="src: #the-spectator; color: #696969; roughness: 0.5; metalness: 0; side: double" animation="property: rotation; to: 0 -360 0; dur: 20000; easing: linear; loop: true"></a-sphere>
             <a-curvedimage id="07list" position="0 0.5 0" scale="1 -1 1" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" material="side: double;; blending: additive" animation="property: rotation; to: 0 360 0; dur: 40000; easing: linear; loop: true"></a-curvedimage>
           </a-entity>
-          <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: inverse; rolloffFactor: 2;"></a-entity>
+          <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: linear; maxDistance: 5"></a-entity>
           <a-image id="07ins" src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="0 2 -2"></a-image>
         </a-entity>
       </a-entity>
       <!-- 09 -->
-      <a-entity id="09exhibit" rotation="0 48.02360351448021 0" scale="2 1.84493 2" position="7.84122 2 -1.97242">
+      <a-entity id="09exhibit" rotation="0 48.02360351448021 0" scale="2 1.84493 2" position="8.21797 2 -2.06462">
         <a-image src="#09-1" scale="2 2 2" position="1 0 0" rotation="0 -90 0" geometry="" material="side: front"></a-image>
         <a-image src="#09-2" scale="2 2 2" position="-1 0 0" rotation="0 90 0" geometry="" material="side: front"></a-image>
         <a-image src="#09-3" scale="2 2 2" position="0 0 1" rotation="" geometry="" material="side: back"></a-image>
         <a-image src="#09-4" scale="2 2 2" position="0 0 -1" rotation="" geometry="" material="side: front"></a-image>
       </a-entity>
       <!-- 11 -->
-      <a-entity id="11" position="-0.64692 2.11876 -18.35615" rotation="0 0 0" scale="0.4712 0.4712 0.4712">
+      <a-entity id="11" position="9.52856 1.75 -9.31993" rotation="0 0 0" scale="0.225 0.225 0.225">
         <a-video src="#Miss_Loss" width="16" height="9" position="0 0 -8" rotation="0 0 0" material="side: front" video-handler-11 geometry=""></a-video>
         <a-video src="#Miss_Loss" width="16" height="9" position="-8 0 0" rotation="0 90 0" material="side: front" video-handler-11 geometry=""></a-video>
-        <!-- <a-video src="#Miss_Loss" width="16" height="9" position="0 0 8" rotation="0 180 0" material="side: front" video-handler-11 geometry=""></a-video> -->
+        <a-video src="#Miss_Loss" width="16" height="9" position="0 0 8" rotation="0 180 0" material="side: front" video-handler-11 geometry=""></a-video>
         <a-video src="#Miss_Loss" width="16" height="9" position="8 0 0" rotation="0 270 0" material="side: front" video-handler-11 geometry=""></a-video>
       </a-entity>
       <!-- 12 -->
-      <a-video id="12exhibit" scale="0.41082 0.41082 0.41082" src="#12" width="8" height="4.5" position="11.22994 2.00682 3.62453" look-at="#player" material="side: front" video-handler></a-video>
+      <a-cylinder id="12exhibit" rotation="0 -135 0" position="0 3.38522 -10.24299" scale="-1.66179 1.66179 1.66179" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 90" material="src: #12; side: back; fog: true;" video-handler></a-cylinder>
       <!-- 15 -->
       <a-entity id="15exhibit1" rotation="0 180 0" scale="0.83592 0.83592 0.83592" position="0 0.48567 -6.47535">
         <a-entity id="15model1" gltf-model="#15-1" position="0.08122 2.04961 -0.00658" scale="0.23255 0.23255 0.23255" rotation="90 -0.5 0"></a-entity>
@@ -133,17 +132,17 @@
       </a-entity> -->
       <!-- Exhibition Statement -->
       <a-plane id="statement-screen" material="shader: gif; src: url(./asset/billboard/text.gif); blending: additive" 
-               geometry="height: 4.8; width: 4.8" 
-               position="0 2.4 0.198"></a-plane>>
-      <a-entity id="statement-model" gltf-model="#billboard" position="0 0 0" scale="0.0035 0.0035 0.0035" rotation="0 0 0"></a-entity>
+               geometry="height: 4.15; width: 4.15" 
+               position="0 2.0564 0.196"></a-plane>>
+      <a-entity id="statement-model" gltf-model="#billboard" position="0 0 0.02617" scale="0.3 0.3 0.3" rotation="0 0 0"></a-entity>
       
 
 <!-- System -->
-      <a-camera id="player" twoway-motion="nonMobileLoad: false; speed: 50; threshold: -45"  position="0 1.6 10" far="1000" fov="75">
+      <a-camera id="player" twoway-motion="nonMobileLoad: false; speed: 50; threshold: -45"  position="0 1.6 15" far="1000" fov="75">
         <!-- animation__start="property: position; from: 0 2 32; to: 0 2 4; dur: 2000;" -->
         <!-- <a-image src="#Menu" width="0.35" height="0.35" position="0 0.025 -0.5" animation="property: position; to: 0 0 1; startEvents: mousedown; dur: 100"></a-image> -->
       </a-camera>
-      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+      <a-entity id="mouseCursor" raycaster="" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
       <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 2"></a-entity>
@@ -156,40 +155,26 @@
  
       <!-- Vrch -->
 
-      <!-- <a-curvedimage id="curimg01" geometry="thetaLength: 360; height: 3; radius: 4" material="side: back; shader: standard; blending: additive; transparent: true" position="0 2.76214 0"></a-curvedimage> -->
-      <a-circle id="circle01" scale="1.5 1.5 1.5" material="wireframe: false; blending: normal; shader: flat; side: double; fog: false" geometry="skipCache: false; primitive: ring; radius: 0.1; radiusOuter: 1; radiusInner: 0.999; thetaLength: 360; segmentsTheta: 36" position="0 1.5 5.97466" color="#CCC" radius="1"></a-circle>
-      <a-circle id="circle02" scale="1.5 1.5 1.5" material="wireframe: false; blending: normal; shader: flat; side: double; fog: false" geometry="skipCache: false; primitive: ring; radius: 0.1; radiusOuter: 1; radiusInner: 0.999; thetaLength: 360; segmentsTheta: 36" position="0 1.5 7.70469" color="#CCC" radius="1"></a-circle>
-      <a-circle id="circle03" scale="1.5 1.5 1.5" material="wireframe: false; blending: normal; shader: flat; side: double; fog: false" geometry="skipCache: false; primitive: ring; radius: 0.1; radiusOuter: 1; radiusInner: 0.999; thetaLength: 360; segmentsTheta: 36" position="0 1.5 9.34708" color="#CCC" radius="1"></a-circle>
-
-      <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: additive; fog: false" rotation="-90 0 0" position="-10.78749 -0.14747 -3.93696" phi-length="270"></a-sphere>
+      <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: additive; fog: false" rotation="-90 0 0" position="-9.80487 0.03387 -4.28449" phi-length="270"></a-sphere>
       <a-sphere id="sphere02" rotation="0 2.635032899806656 0" geometry="thetaLength: 125; radius: 4.5; phiLength: 300" material="side: back; dithering: true; flatShading: false; transparent: true; blending: additive; visible: true; fog: false" position="8.21797 2.5 -2.06462"></a-sphere>
       <a-sphere id="sphere03" rotation="180 0 0" geometry="thetaLength: 60; radius: 3; thetaStart: 45" material="side: back; dithering: true; flatShading: false; blending: additive" position="-11.37988 2.04172 0.94001"></a-sphere>
       <a-sphere id="sphere04" rotation="14.999999999999998 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: additive; fog: false" position="3.16213 3.80071 -6.56453"></a-sphere>
-      <a-sphere id="sphere05" rotation="0 51.35363421978056 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: additive; opacity: 1; transparent: false; fog: false; color: #c0c0c0" position="-0.00864 3.39907 -0.35626"></a-sphere>
+      <a-sphere id="sphere05" rotation="0 51.35363421978056 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: additive; opacity: 1; transparent: false; fog: false; color: #c0c0c0" position="0 3.39907 -0.35626"></a-sphere>
       <a-sphere id="sphere06" rotation="90 0 0" geometry="thetaLength: 180; thetaStart: 0; phiLength: 180; radius: 2" material="side: back; dithering: true; flatShading: false; blending: additive; transparent: false; fog: false" position="11.22994 2.00682 3.62453"></a-sphere>
-      <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.3815 1.5 -9.30443"></a-sphere>
-      <a-sphere id="sphere08a" rotation="-90 179.9998479605043 179.9998479605043" geometry="thetaLength: 125; radius: 9" material="side: back; dithering: true; flatShading: false; transparent: false; fog: false; blending: additive" position="-0.54704 0 -16.17024"></a-sphere>
-
+      <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.52856 1.5 -9.31993"></a-sphere>
+      <a-sphere id="sphere08a" rotation="-90 179.9998479605043 179.9998479605043" geometry="thetaLength: 125; radius: 9" material="side: back; dithering: true; flatShading: false; transparent: false; fog: false; blending: additive" position="0 0 -16.51967"></a-sphere>
 
       <!-- Vrch Mirror -->
       <a-entity scale="1 -1 1">
-        <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: additive; fog: false" rotation="-90 0 0" position="-10.78749 -0.14747 -3.93696" phi-length="270"></a-sphere>
-        <a-sphere id="sphere02" rotation="0 2.635032899806656 0" geometry="thetaLength: 125; radius: 4.5; phiLength: 330" material="side: back; dithering: true; flatShading: false; transparent: true; blending: additive; visible: true; fog: false" position="8.21797 2.5 -2.06462"></a-sphere>
+        <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: additive; fog: false" rotation="-90 0 0" position="-9.80487 0.03387 -4.28449" phi-length="270"></a-sphere>
+        <a-sphere id="sphere02" rotation="0 2.635032899806656 0" geometry="thetaLength: 125; radius: 4.5; phiLength: 300" material="side: back; dithering: true; flatShading: false; transparent: true; blending: additive; visible: true; fog: false" position="8.21797 2.5 -2.06462"></a-sphere>
         <a-sphere id="sphere03" rotation="180 0 0" geometry="thetaLength: 60; radius: 3; thetaStart: 45" material="side: back; dithering: true; flatShading: false; blending: additive" position="-11.37988 2.04172 0.94001"></a-sphere>
-        <a-sphere id="sphere04" rotation="15 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: additive; fog: false" position="2.25924 3.80071 -6.56453"></a-sphere>
-        <a-sphere id="sphere05" rotation="0 90 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: additive; opacity: 1; transparent: false; fog: false; color: #c0c0c0" position="-0.00864 3.39907 -0.35626"></a-sphere>
+        <a-sphere id="sphere04" rotation="14.999999999999998 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: additive; fog: false" position="3.16213 3.80071 -6.56453"></a-sphere>
+        <a-sphere id="sphere05" rotation="0 51.35363421978056 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: additive; opacity: 1; transparent: false; fog: false; color: #c0c0c0" position="0 3.39907 -0.35626"></a-sphere>
         <a-sphere id="sphere06" rotation="90 0 0" geometry="thetaLength: 180; thetaStart: 0; phiLength: 180; radius: 2" material="side: back; dithering: true; flatShading: false; blending: additive; transparent: false; fog: false" position="11.22994 2.00682 3.62453"></a-sphere>
-        <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.3815 1.5 -9.30443"></a-sphere>
+        <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: additive; color: #000000; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0" position="9.52856 1.5 -9.31993"></a-sphere>
       </a-entity>
 
-      <!-- <a-entity position="0 0 16" mixin="rect"></a-entity>
-      <a-entity position="0 0 8" mixin="rect"></a-entity>
-      <a-entity position="0 0 2" mixin="rect"></a-entity>
-      <a-entity position="0 0 0" mixin="rect"></a-entity>
-      <a-entity position="0 0 -2" mixin="rect"></a-entity>
-      <a-entity position="0 0 -8" mixin="rect"></a-entity>
-      <a-entity position="0 0 -16" mixin="rect"></a-entity>
-      <a-ocean  opacity="0.5" depth="10" width="10" mirror></a-ocean> -->
     </a-scene>
   </body>
 </html>

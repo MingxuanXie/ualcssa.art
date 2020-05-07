@@ -1,11 +1,10 @@
-AFRAME.registerComponent('click-url', {
+AFRAME.registerComponent('click-url-new-win', {
   schema: {default: ''},
 
   init: function () {
     var url = this.data;
     this.el.addEventListener('click', function () {
-    // window.location.href = url;
-    window.open(url,"_self")
+    window.open(url, "_blank");
     });
   }
 });  
