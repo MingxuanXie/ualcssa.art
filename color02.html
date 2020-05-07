@@ -75,7 +75,7 @@
       </a-entity>
 
 <!-- Lights -->
-      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 2"></a-entity>
+      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="0 1 2"></a-entity>
       <a-entity light="type: ambient; color: white; intensity: 0.5"></a-entity>
 
 <!-- Scene -->
@@ -83,9 +83,9 @@
       <!-- <a-sky id="sky"color="cyan"></a-sky> -->
       <a-plane id="actual-ground" position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" material="; transparent: true; wireframe: false; roughness: 0; opacity: 0.9; metalness: 0; blending: multiply; color: blue; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"></a-plane>
       
-      <a-image id="logo" src="#logoimg" material="fog: false" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
+      <a-image id="logo" src="#logoimg" material="fog: false; alphaTest: 0.1" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
       <a-entity rotation="0 0 180">
-        <a-image id="logo" src="#logoimg" material="fog: false" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
+        <a-image id="logo" src="#logoimg" material="fog: false; alphaTest: 0.1" position="0 1.65 0" scale="0.8 0.8 0.8" width="10.14" height="3.4"></a-image>
       </a-entity>
       
       <!-- Vrch Cafe -->
