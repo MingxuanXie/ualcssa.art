@@ -54,6 +54,7 @@
         <!-- Exhibition Statement -->
         <a-asset-item id="billboard" src="./asset/billboard/scene.gltf"></a-asset-item>
         <img id="statement-text" src="./asset/statement.jpg" alt="">
+        <img id="credits-img" src="./asset/credits.jpg" alt="">
         <!-- Vrch -->
         <a-mixin id="rect" line__1="start: -2, 0, 0; end: 2 0 0; color: white" line__2="start: -2, 0, 0; end: -2 4 0; color: white" line__3="start: 2, 0, 0; end: 2 4 0; color: white" line__4="start: -2, 4, 0; end: 2 4 0; color: white"></a-mixin>
       </a-assets>
@@ -71,9 +72,9 @@
 
       <!-- 06 -->
       <a-entity id="06exhibit" rotation="0 -26.003689532012412 0" position="11.22994 0 3.62453">
-        <a-entity position="0.45272 1.45845 0.24542" light="type: point; castShadow: true; distance: 1"></a-entity>
-        <a-entity position="-0.44241 1.36828 0.14615" light="type: point; castShadow: true; distance: 1"></a-entity>
-        <a-entity position="0.06107 1.26492 -0.2307" light="type: point; castShadow: true; distance: 1"></a-entity>
+        <a-entity position="0.45272 1.45845 0.24542" light="type: point;  distance: 1"></a-entity>
+        <a-entity position="-0.44241 1.36828 0.14615" light="type: point;  distance: 1"></a-entity>
+        <a-entity position="0.06107 1.26492 -0.2307" light="type: point;  distance: 1"></a-entity>
         <a-entity id="06model" gltf-model="#06" position="-0.03745 1.0452 0.08267" rotation="0 -7.157388776774244 0"  scale="0.03596 0.03596 0.03596"></a-entity>
         <a-circle id="06stand" geometry="segments: 36" material="transparent: false; color: #000000; fog: false" scale="0.6024 0.6024 0.6024" position="0 1 0" rotation="-90 0 0"><a-sphere id="06stand-base" material="fog: false; color: #000000" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
         <a-image id="06img1" src="#06-1" position="0 3 0" scale="" width="1.024" height="0.842" material="transparent: false; fog: false" geometry="" rotation="0 30 0"></a-image>
@@ -83,11 +84,11 @@
 
       <!-- 07 -->
       <a-entity id="07exhibit" position="-9.82951 0.1 2.7052">
-        <a-entity id="07light" rotation="-39.729466472166415 3.872621737289234 -15.331777639905699" light="type: spot; color: #b0d8ff; intensity: 1; angle: 30; distance: 7" position="-1.30226 6.21687 3.39744"></a-entity>
+        <a-entity id="07light" rotation="-39.729466472166415 3.872621737289234 -15.331777639905699" light="type: spot; color: #b0b0ff; intensity: 1; angle: 30; distance: 10" position="-1.30226 6.21687 3.39744"></a-entity>
         <a-entity rotation="0 40.57171443100872 0">
           <a-entity id="07earth" rotation="0 0 -25" position="0 2 -2">
             <a-sphere id="07sphere" radius="2" material="src: #the-spectator; color: #ffffff; roughness: 0.5; metalness: 0; side: double; fog: false" animation="property: rotation; to: 0 -360 0; dur: 20000; easing: linear; loop: true;"></a-sphere>
-            <a-curvedimage id="07list" rotation="0 182.6434800000134 0" position="0 0.5 0" scale="1 -1 1" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" material="side: double; blending: additive; fog: false; alphaTest: 0.1; transparent: false; color: #ffffff" animation="property: rotation; to: 0 360 0; dur: 40000; easing: linear; loop: true;"></a-curvedimage>
+            <a-curvedimage id="07list" rotation="0 333.6535559365871 0" position="0 0.5 0" scale="1 -1 1" src="#07-list" geometry="height: 3; radius: 2.05; thetaLength: 360" material="side: double; blending: additive; fog: false; alphaTest: 0.2; transparent: false; color: #ffffff" animation="property: rotation; to: 0 360 0; dur: 40000; easing: linear; loop: NaN;"></a-curvedimage>
           </a-entity>
           <a-entity sound="src: #the-whistler; autoplay: true; loop: true; distanceModel: linear; maxDistance: 5"></a-entity>
           <a-image id="07ins" src="#07-ins" width="1.242" height="0.968" opacity="0.95" position="0 2 -2"></a-image>
@@ -110,13 +111,14 @@
       <!-- 12 -->
       <a-cylinder id="12exhibit" rotation="0 -135 0" position="-0.50567 3.38522 -10.24299" scale="-1.66179 1.66179 1.66179" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 90" material="src: #12; side: back; fog: false;" video-handler></a-cylinder>
       <!-- 15 -->
+      <a-entity id="15light" position="-0.02467 2.18563 -7.42704" light="type: point;  distance: 5; color: #ffffff"></a-entity>
       <a-entity id="15exhibit1" rotation="0 180 0" scale="0.83592 0.83592 0.83592" position="0 0.48567 -6.47535">
         <a-entity id="15model1" gltf-model="#15-1" position="0.08122 2.04961 -0.00658" scale="0.23255 0.23255 0.23255" rotation="90 -0.5 0"></a-entity>
-        <a-cylinder id="15stand1" visible="true" geometry="radius: 1.5" height="0.3" position="0 2 0.00609" rotation="90 0 0" color="#000022" material="roughness: 1; blending: normal; transparent: false; color: #000000; opacity: 1; flatShading: false; shader: standard; side: front; fog: false"></a-cylinder> 
+        <a-cylinder id="15stand1" visible="true" geometry="radius: 1.5" height="0.3" position="0 2 0.00609" rotation="90 0 0" color="#000022" material="roughness: 0.4; blending: normal; transparent: false; color: #000000; opacity: 1; flatShading: false; shader: standard; side: front; fog: false"></a-cylinder> 
       </a-entity>
-      <a-entity id="15exhibit2" rotation="0 180 0" position="0 -0.17507 -6.57873">
+      <a-entity id="15exhibit2" rotation="0 180 0" position="0 -0.27063 -5.71915">
         <a-entity id="15model2" geometry="height: 1.2; radius: 0.6" gltf-model="#15-2" position="-0.00412 1.1593 1.53763" scale="0.57059 0.57059 0.57059" rotation="0 3.49389663470776 0"></a-entity>
-        <a-circle id="15stand" geometry="segments: 36" material="blending: normal; fog: false; transparent: false; color: #000000; depthTest: true; shader: standard" scale="0.61362 0.61362 0.61362" position="-0.01276 1.17192 1.49386" rotation="-90 0 0"><a-sphere id="15stand-base" material="color: #000000; transparent: false; fog: false" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
+        <a-circle id="15stand" geometry="segments: 36" material="roughness: 0.4; blending: normal; fog: false; transparent: false; color: #000000; depthTest: true; shader: standard" scale="0.61362 0.61362 0.61362" position="-0.01276 1.17192 1.49386" rotation="-90 0 0"><a-sphere id="15stand-base" material="roughness: 0.4; color: #000000; transparent: false; fog: false" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle>
       </a-entity>
       <!-- <a-entity id="15text" rotation="2.308789794150025 0.7040447718692244 -0.028384825453797828" position="0.0223 2.07786 1.4271"
         geometry="primitive: plane; height: 0.923; width: auto" material="visible: false"
@@ -135,6 +137,11 @@
                 geometry="height: 4.15; width: 4.15" 
                 position="0 2.0564 0.197"></a-plane>>
         <a-entity id="statement-model" gltf-model="#billboard" position="0 0 0.02617" scale="0.3 0.3 0.3" rotation="0 0 0"></a-entity>
+        <a-plane id="credits" scale="1 1 1" material="shader: standard; src: #credits-img; blending: normal; fog: false" 
+                geometry="height: 4.15; width: 4.15" 
+                position="0 2.0564 -0.14776"
+                rotation="0 180 0" 
+                ></a-plane>>
       </a-entity>
 
 <!-- System -->
@@ -176,7 +183,7 @@
 
       <!-- Environment -->
       <a-plane id="actual-ground" position="0 0 0" material="; transparent: true; wireframe: false; roughness: 0.45; opacity: 0.9; metalness: 0; blending: multiply; color: #74d5ee; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" ></a-plane>
-      <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
+      <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50; segmentsWidth: 16; segmentsHeight: 16"></a-sky>
 
     </a-scene>
   </body>

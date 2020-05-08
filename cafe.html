@@ -52,7 +52,7 @@
       <a-entity id="virtual-portal" click-url="./virtuality.html" scale="2.5011364390144273 2.5011364390144273 2.5011364390144273" rotation="0 42.98673153748515 0"  position="-6.52077 0 -7.05644" mixin="portal" look-at="" geometry="" raycastable="" animation__mouseenterscale=""> 
         <a-entity rotation="0 90 90">
           <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
-          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #f37132; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
+          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
         </a-entity>
         <a-entity class="portalText" text="color: #ffffff; align: center; baseline: bottom; value: VIRTUALITY; side: double; width: 4" position="0 0 0"></a-entity>
         <a-entity class="portalTextMirror" text="color: #ffffff; align: center; baseline: bottom; value: VIRTUALITY; side: double; width: 4" position="0 0 0" scale="1 -1 1"></a-entity> 
@@ -61,7 +61,7 @@
       <a-entity id="real-portal" click-url="./reality.html" rotation="0 -136.54214511542162 0" position="6.51318 0 7.10872" mixin="portal" look-at="" geometry="" raycastable="" animation__mouseenterscale=""> 
         <a-entity rotation="0 90 90">
           <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
-          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #f37132; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
+          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
         </a-entity>
         <a-entity class="portalText" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0"></a-entity>
         <a-entity class="portalTextMirror" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0" scale="1 -1 1"></a-entity> 
@@ -96,7 +96,7 @@
 
     <!-- Environment -->
     <a-plane id="actual-ground" position="0 0 0" material="; transparent: true; wireframe: false; roughness: 0.45; opacity: 0.9; metalness: 0; blending: multiply; color: #74d5ee; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" ></a-plane>
-    <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
+    <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50; segmentsWidth: 16; segmentsHeight: 16"></a-sky>
     <a-sky id="virtual-sky-02" material="wireframe: true; wireframeLinewidth: 0.1; fog: false; color: #eee; opacity: 0.5; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
 
     </a-scene>

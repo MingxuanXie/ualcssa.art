@@ -29,6 +29,7 @@
         <img id="titleimg02" src="./asset/title02.png" alt="">
         <img id="titleimg03" src="./asset/title03.png" alt="">
         <img id="announcement" src="./asset/announcement.png" alt="">
+        <img id="recommendation" src="./asset/recommendation.png" alt="">
       </a-assets>
 
 <!-- Template -->
@@ -45,24 +46,23 @@
       animation__back="property: position; dur: 1; to: 0 0 0; startEvents: turnBack"
       >
         <a-camera id="player" position="0 1.6 15" far="1000" fov="75">
-          <a-entity text="width: 0.5;value:Reality; align: center; font: mozillavr" position="0 0.2 -0.3" geometry="primitive: box; width: 1; height: 0.1; depth: 0.1"
+          <a-entity position="0 0.2 -0.3" geometry="primitive: box; width: 1; height: 0.1; depth: 0.1"
                     proxy-event__enter="event: mouseenter; to: #cameraRig; as: turnReal"   
-                    click-url="./reality.html"
                     material="visible: false"
           ></a-entity>
-          <a-entity text="width: 0.5; value:Virtuality; align: center; font: mozillavr; color: #fff" position="0 -0.18 -0.3" geometry="primitive: box; width: 1; height: 0.1; depth: 0.1"
+          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 1; height: 0.1; depth: 0.1"
                     proxy-event__enter="event: mouseenter; to: #cameraRig; as: turnVirtual"  
-                    click-url="./virtuality.html"
                     material="visible: false"
           ></a-entity>
-          <a-entity text="width: 0.4; value: Cafe; font: mozillavr;" position="0.52 0.01 -0.3" geometry="primitive: box; width: 0.5; height: 0.1; depth: 0.1"
+          <a-entity position="0.52 0.01 -0.3" geometry="primitive: box; width: 0.5; height: 0.1; depth: 0.1"
                     proxy-event__enter="event: mouseenter; to: #cameraRig; as: turnCafe"
                     proxy-event__leave="event: mouseleave; to: #cameraRig; as: turnBack"
-                    click-url="./cafe.html"
                     material="visible: false"
           ></a-entity>
           <!-- <a-entity text="value:Choose a side to start viewing; font: mozillavr" position="0 0 -0.5"></a-entity>    -->
-          <a-image id="title04"  rotation="0 0 0" scale="1 1 1" material="alphaTest: 0.1; fog: false; blending: normal; color: #808080" position="0.10177 0.93267 -2.00302" src="#announcement"></a-image>
+          <a-image id="title04"  rotation="0 0 0" scale="0.9  0.9 0.9" material="alphaTest: 0.1; fog: false; blending: normal; color: #808080" position="0 0.93267 -2.00302" src="#announcement"></a-image>
+          <a-image id="title05"  rotation="0 0 0" scale="0.9  0.9 0.9" material="alphaTest: 0.2; fog: false; blending: normal; color: #fff" position="0 -1.1 -2.00302" src="#recommendation"></a-image>
+
         </a-camera>
       </a-entity>
 
@@ -77,9 +77,9 @@
 
       <a-image id="logo_mir" position="-11.2 -0.61188 1" rotation="0 0 180" src="#logoimg" material="fog: false; transparent: true; blending: normal; alphaTest: 0.1; shader: standard"  scale="1.4 1.4 1.4" width="3.549" height="0.73"></a-image>
 
-      <a-image id="title01" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; delay: 1000" material="alphaTest: 0.15; fog: false" position="-0.50416 2.20179 0" src="#titleimg01" width="10.14" height="3.42"></a-image>
-      <a-image id="title02" animation="property: rotation; to: 360 0 0; loop: true; dur: 10000; delay: 1000" scale="0.87476 0.87476 0.87476" material="alphaTest: 0.15; fog: false" position="8.30717 0 2.71991" src="#titleimg02" width="10.14" height="5.12"></a-image>
-      <a-image id="title03" animation="property: rotation; to: 0 -360 90; loop: NaN; dur: 10000; delay: 1000" rotation="0 0 90" scale="0.87476 0.87476 0.87476" material="alphaTest: 0.15; fog: false" position="-0.65984 -0.89428 0" src="#titleimg03" width="4.06" height="10.14"></a-image>
+      <a-image id="title01" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; delay: 5000" material="alphaTest: 0.15; fog: false" position="-0.50416 2.20179 0" src="#titleimg01" width="10.14" height="3.42"></a-image>
+      <a-image id="title02" animation="property: rotation; to: 360 0 0; loop: true; dur: 10000; delay: 5000" scale="0.87476 0.87476 0.87476" material="alphaTest: 0.15; fog: false" position="8.30717 0 2.71991" src="#titleimg02" width="10.14" height="5.12"></a-image>
+      <a-image id="title03" animation="property: rotation; to: 0 -360 90; loop: true; dur: 10000; delay: 5000" rotation="0 0 90" scale="0.87476 0.87476 0.87476" material="alphaTest: 0.15; fog: false" position="-0.65984 -0.89428 0" src="#titleimg03" width="4.06" height="10.14"></a-image>
 
       <!-- Vrch Cafe -->
       <a-entity id="cafe" position="0 0 40" rotation="0 47 0">
