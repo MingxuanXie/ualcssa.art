@@ -19,7 +19,7 @@
   <body>
 
 <!-- Aframe -->
-    <a-scene background="color: #e2e2dc" fog="type: exponential; color: #dfdfdf; density: 0.1" loading-screen="dotsColor: white; backgroundColor: black" vr-mode-ui="enabled: false" wasd-control> 
+    <a-scene background="color: #e2e2dc" fog="type: exponential; color: #dfdfdf; density: 0.1" loading-screen="dotsColor: #e2e2dc; backgroundColor: #9ec9ce" vr-mode-ui="enabled: false" wasd-control> 
 
 <!-- Assets -->
       <a-assets>
@@ -60,7 +60,7 @@
         <img id="statement-text" src="./asset/statement.jpg" alt="">
         <img id="credits-img" src="./asset/credits.jpg" alt="">
         <!-- Vrch -->
-        <a-mixin id="tag" look-at="#player" geometry="primitive: plane; width: 0.25; height: 0.3535" material="shader: flat; fog: false;" event-set__makevisible="_event: mouseenter; scale: 4 4 4" event-set__leave="_event: mouseleave; scale: 1 1 1"></a-mixin>
+        <a-mixin id="tag" look-at="#player" geometry="primitive: plane; width: 0.25; height: 0.3535" material="" event-set__makevisible="_event: mouseenter; scale: 4 4 4" event-set__leave="_event: mouseleave; scale: 1 1 1"></a-mixin>
       </a-assets>
 
 <!-- Template -->
