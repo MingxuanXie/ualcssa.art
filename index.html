@@ -23,12 +23,13 @@
 
 <!-- Assets -->
       <a-assets>
-        <!-- Vrch -->
+        <!-- UI -->
         <img id="logoimg" src="./asset/logo.png" alt="">
         <img id="titleimg01" src="./asset/title01.png" alt="">
         <img id="titleimg02" src="./asset/title02.png" alt="">
         <img id="titleimg03" src="./asset/title03.png" alt="">
-        <img id="announcement" src="./asset/announcement.png" alt="">
+        <img id="cn-instruct-img" src="./asset/chinese_instruct.png" alt="">
+        <img id="en-instruct-img" src="./asset/english_instruct.png" alt="">
         <img id="reality" src="./asset/reality.png" alt="">
         <img id="virtuality" src="./asset/virtuality.png" alt="">
         <img id="cafe" src="./asset/cafe.png" alt="">
@@ -67,7 +68,8 @@
                     material="visible: false"
           ></a-entity>
           <a-image id="cafetitle" material="alphaTest: 0.05; blending: multiply" src="#cafe" position="0.35 -0.04 -0.3" rotation="0 -45 0" width="0.03" height="0.1"></a-image>
-          <!-- <a-image id="OpeningTime"  rotation="0 0 0" scale="1 1 1" material="alphaTest: 0.1; fog: false; blending: normal; color: #808080" position="0.10177 0.93267 -2.00302" src="#announcement"></a-image> -->
+          <a-image id="cn_instruct"  rotation="15 0 0" width="0.53" height="0.2525" material="shader: flat; alphaTest: 0.15; fog: false; blending: normal; color: #bbb;" position="0 0.36 -1" src="#cn-instruct-img"></a-image>
+          <a-image id="en_instruct"  rotation="-15 0 0" width="0.6" height="0.3" material="shader: flat; alphaTest: 0.1; fog: false; blending: normal; opacity:0.3" position="0 -0.36 -1" src="#en-instruct-img"></a-image>
         </a-camera>
       </a-entity>
 

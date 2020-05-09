@@ -25,10 +25,12 @@
         <img id="virtuality" src="./asset/virtuality.png" alt="">
         <img id="chat-button" src="./asset/chat_button.png" alt="">
 
+        <img id="lightball" src="./asset/lightball.png">
+
+        <!-- Exhibit -->
         <img id="tagimg03" src="./asset/tags/tag_Page_03.png" alt="">
         <video id="03" autoplay muted="true" loop="true" src="./asset/03/little_red_music_restaurant.mp4"></video>
-        <!--  -->
-        <img id="lighttex" src="./asset/lightball.png">
+
         <!-- Vrch -->
         <img id="portalImg" src="./asset/portal.png">
         <a-mixin id="portal" material="visible: false" geometry="primitive: sphere; segments: 24;" raycastable="" scale="2.5 2.5 2.5" animation__mouseenterscale="property: scale; from: 2.5 2.5 2.5; to: 2.8 2.8 2.8; easing: easeInOutQuad; dir: alternate; loop: true; startEvents: mouseenter; dur: 1000; pauseEvents: mouseleave"></a-mixin>
@@ -46,11 +48,11 @@
       </a-entity>
 
 <!-- System -->
-      <a-camera id="player" position="0 1.6 7.5" far="1000" fov="75">
-        <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="0 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+      <a-camera id="player" position="0.4 1.6 7.5" far="1000" fov="75">
+        <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="0 -0.2 -0.3" rotation="0 0 0" width="0.1" height="0.05" scale="0.8 0.8 0.8"></a-image>
       </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
-
+      
 <!-- Lights -->
 <a-entity light="color: #e2dcc5; intensity: 0.3" position="0 1 2"></a-entity>
 <a-entity light="type: ambient; color: #e3f0e9; intensity: 0.7; groundColor: #ffffff"></a-entity>
@@ -104,6 +106,9 @@
     <a-plane id="actual-ground" position="0 0 0" material="; transparent: true; wireframe: false; roughness: 0.45; opacity: 0.9; metalness: 0; blending: multiply; color: #74d5ee; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" ></a-plane>
     <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50; segmentsWidth: 16; segmentsHeight: 16"></a-sky>
     <a-sky id="virtual-sky-02" material="wireframe: true; wireframeLinewidth: 0.1; fog: false; color: #eee; opacity: 0.5; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
+
+    <!-- Other Player -->
+    <a-circle look-at="#player" material="src: #lightball; shader: flat; transparent: true; blending: additive; opacity: 0.9" position="0 1.6 0" radius="0.15" geometry="segments: 24"></a-circle>
 
     </a-scene>
   </body>
