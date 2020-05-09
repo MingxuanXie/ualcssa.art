@@ -27,6 +27,8 @@
       <img id="reality" src="./asset/reality.png" alt="">
       <img id="virtuality" src="./asset/virtuality.png" alt="">
       <img id="cafe" src="./asset/cafe.png" alt="">
+      <img id="cafe-button" src="./asset/cafe_button.png" alt="">
+      <img id="chat-button" src="./asset/chat_button.png" alt="">
       <!-- Tag -->
       <img id="tagimg02" src="./asset/tags/tag_Page_02.png" alt="">
       <img id="tagimg05" src="./asset/tags/tag_Page_05.png" alt="">
@@ -176,12 +178,15 @@
       <a-entity id="cameraRigv"
       animation__turnaround="property: rotation; dur: 500; to: 0 0 180; startEvents: turnaround">
         <a-camera id="player" position="0 1.6 15" far="1000" fov="75">
-          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.2; height: 0.1; depth: 0.05"
+          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.15; height: 0.05; depth: 0.05"
                     proxy-event__click="event: click; to: #cameraRigv; as: turnaround"  
                     click-url-delay="./reality.html"
                     material="visible: false"
           ></a-entity>
-          <a-image id="realitytitle" material="alphaTest: 0.1; blending: additive" src="#reality" position="0 -0.18 -0.3" rotation="-45 0 0" width="0.12" height="0.05"></a-image>
+          <a-image id="realitytitle" material="alphaTest: 0.1; blending: additive" src="#reality" position="0 -0.2 -0.3" rotation="-60 0 0" width="0.1" height="0.04"></a-image>
+          <a-image id="cafebutton" click-url="./cafe.html" material="alphaTest: 0.1; blending: additive" src="#cafe-button" position="0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+          <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="-0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+
         </a-camera>
       </a-entity>
 
@@ -189,9 +194,7 @@
 <a-entity light="color: #e2dcc5; intensity: 0.3" position="0 1 2"></a-entity>
 <a-entity light="type: ambient; color: #e3f0e9; intensity: 0.7; groundColor: #ffffff"></a-entity>
 
-<!-- Scene -->
-      <!-- Environment -->
- 
+<!-- Scene --> 
       <!-- Vrch -->
 <a-entity rotation="0 0 180">
       <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: normal; fog: false; opacity: 0.8; color: #ffffff; roughness: 0.45" rotation="-90 0 0" position="-10.42887 0 -4.28449" phi-length="270"></a-sphere>

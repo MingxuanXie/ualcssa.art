@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/click-url-new-win.js"></script>
     <script src="./js/click-url-delay.js"></script>
+    <script src="./js/click-url.js"></script>
   </head>
   <body>
 
@@ -24,6 +25,12 @@
 
 <!-- Assets -->
       <a-assets>
+        <!-- UI -->
+        <img id="reality" src="./asset/reality.png" alt="">
+        <img id="virtuality" src="./asset/virtuality.png" alt="">
+        <img id="cafe" src="./asset/cafe.png" alt="">
+        <img id="cafe-button" src="./asset/cafe_button.png" alt="">
+        <img id="chat-button" src="./asset/chat_button.png" alt="">
         <!-- Tag -->
         <img id="tagimg04" src="./asset/tags/tag_Page_04.png" alt="">
         <img id="tagimg06" src="./asset/tags/tag_Page_06.png" alt="">
@@ -64,17 +71,7 @@
         <a-mixin id="tag" look-at="#player" geometry="primitive: plane; width: 0.25; height: 0.3535" material="" event-set__makevisible="_event: mouseenter; scale: 4 4 4" event-set__leave="_event: mouseleave; scale: 1 1 1"></a-mixin>
       </a-assets>
 
-<!-- Template -->
-      <!-- Stand -->
-      <!-- <a-circle id="stand" geometry="segments: 36" material="blending: normal; wireframe: false; transparent: false; color: #ffffff; depthTest: true" scale="0.6024 0.6024 0.6024" position="-0.01276 1.21482 1.49386" rotation="-90 0 0"><a-sphere id="stand-base" material="blending: none" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle> -->
-      <!-- Hoovered Text -->
-      <!-- <a-box scale="10 10 10" visible="false" event-set__makevisible="_event: mouseenter; visible: true" event-set__leave="_event: mouseleave; visible: false"></a-box> -->
-
 <!-- Exhibits -->
-      <!-- UI -->
-      <img id="reality" src="./asset/reality.png" alt="">
-      <img id="virtuality" src="./asset/virtuality.png" alt="">
-      <img id="cafe" src="./asset/cafe.png" alt="">
       <!-- Tags -->
       <a-entity id="tag04" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg06" position="-11.58073 1.6 -12.66832"></a-entity> 
       <a-entity id="tag06" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg06" position="11.97747 1.6 4.46521"></a-entity> 
@@ -156,12 +153,15 @@
 
       <a-entity id="cameraRigr" animation__turnaround="property: rotation; dur: 500; to: 0 0 180; startEvents: turnaround">
         <a-camera id="player" position="0 1.6 15" far="1000" fov="75">
-          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.2; height: 0.1; depth: 0.05"
+          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.15; height: 0.05; depth: 0.05"
                     proxy-event__click="event: click; to: #cameraRigr; as: turnaround"  
                     click-url-delay="./virtuality.html"
                     material="visible: false"
           ></a-entity>
-          <a-image id="virtualitytitle" material="alphaTest: 0.1; blending: additive" src="#virtuality" position="0 -0.18 -0.3" rotation="-45 0 0" width="0.12" height="0.05"></a-image>
+          <a-image id="virtualitytitle" material="alphaTest: 0.1; blending: additive" src="#virtuality" position="0 -0.2 -0.3" rotation="-45 0 0" width="0.1" height="0.04"></a-image>
+          <a-image id="cafebutton" click-url="./cafe.html" material="alphaTest: 0.1; blending: additive" src="#cafe-button" position="0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+          <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="-0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+
         </a-camera>
       </a-entity>
 
@@ -192,13 +192,17 @@
         <a-sphere id="sphere04" rotation="14.999999999999998 90 -90" geometry="thetaLength: 180; phiLength: 75; radius: 8; phiStart: 0" material="side: front; dithering: true; flatShading: false; blending: normal; fog: false; opacity: 0.9; roughness: 0.45; transparent: true" position="3.16213 3.80071 -6.56453"></a-sphere>
         <a-sphere id="sphere05" rotation="0 51.35363421978056 0" geometry="thetaLength: 35; thetaStart: 90; phiStart: 180; radius: 6; phiLength: 270" material="side: back; dithering: true; flatShading: false; blending: normal; opacity: 1; transparent: false; fog: false; color: #fff" position="0 3.39907 -0.35626"></a-sphere>
         <a-sphere id="sphere06" rotation="90 0 0" geometry="thetaLength: 180; thetaStart: 0; phiLength: 180; radius: 2" material="side: back; dithering: true; flatShading: false; blending: normal; transparent: false; fog: false; opacity: 0.8; roughness: 0.45" position="11.22994 2.00682 3.62453"></a-sphere>
-        <a-sphere id="sphere07" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: multiply; color: #ffffff; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0; roughness: 0.45" position="9.52856 1.5 -9.31993"></a-sphere>
+        
+        <a-sphere id="sphere06wire" rotation="-180 -30 0" geometry="thetaLength: 90; thetaStart: 0; phiLength: 180; radius: 2; segmentsWidth: 16; segmentsHeight: 8" material="wireframe: true; side: back; dithering: true; flatShading: false; blending: additive; transparent: false; fog: false; opacity: 1; roughness: 0.45" position="11.22994 2.00682 3.62453"></a-sphere>
+        <a-sphere id="sphere07wire" scale="1 1 1" geometry="thetaLength: 30; radius: 3; thetaStart: 90" material="wireframe: true; side: back; dithering: true; flatShading: false; transparent: false; visible: true; depthWrite: true; blending: multiply; color: #ffffff; depthTest: true; emissive: #000000; fog: true; opacity: 1; alphaTest: 0; roughness: 0.45" position="9.52856 1.5 -9.31993"></a-sphere>
+        <!-- <a-sphere id="sphere01wire" geometry="phiLength: 120; radius: 10" material="wireframe: true; side: back; transparent: false; blending: normal; fog: false; opacity: 0.8; color: #ffffff; roughness: 0.45" rotation="-90 0 0" position="-10.42887 0 -4.28449" phi-length="270"></a-sphere> -->
+        <a-sphere id="sphere04wire" rotation="14.999999999999998 90 -90" geometry="thetaLength: 150; phiLength: 75; radius: 8; phiStart: 0; thetaStart: 30; segmentsWidth: 24; segmentsHeight: 15" material="wireframe: true; side: front; blending: normal; opacity: 1; roughness: 0.45; transparent: true" position="3.16213 3.80071 -6.56453"></a-sphere>
       </a-entity>
 
       <!-- Environment -->
       <a-plane id="actual-ground" position="0 0 0" material="; transparent: true; wireframe: false; roughness: 0.45; opacity: 0.9; metalness: 0; blending: multiply; color: #74d5ee; shader: standard; depthTest: true; depthWrite: true; alphaTest: 0; side: double; visible: true"position="0 0 0" geometry="height: 1000; width: 1000; primitive: circle; radius: 50; thetaLength: 360" height="100" width="100" rotation="90 0 0" ></a-plane>
       <a-sky id="virtual-sky-01" material="fog: false; color: #9ec9ce; shader: flat; opacity: 0.85; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50; segmentsWidth: 16; segmentsHeight: 16"></a-sky>
-
+      <a-sky id="virtual-sky-02" material="wireframe: true; fog: false; color: #eee; opacity: 0.5; roughness: 0.45.5; transparent: true" rotation="90 0 0" geometry="phiLength: 180; radius: 50"></a-sky>
     </a-scene>
   </body>
 </html>

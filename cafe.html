@@ -12,6 +12,7 @@
     <script src="./js/aframe-look-at-component.min.js"></script>
     <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/click-url.js"></script>
+    <script src="./js/click-url-new-win.js"></script>
   </head>
   <body>
 
@@ -20,8 +21,13 @@
 
 <!-- Assets -->
       <a-assets>
+        <img id="reality" src="./asset/reality.png" alt="">
+        <img id="virtuality" src="./asset/virtuality.png" alt="">
+        <img id="chat-button" src="./asset/chat_button.png" alt="">
+
         <img id="tagimg03" src="./asset/tags/tag_Page_03.png" alt="">
         <video id="03" autoplay muted="true" loop="true" src="./asset/03/little_red_music_restaurant.mp4"></video>
+        <!--  -->
         <img id="lighttex" src="./asset/lightball.png">
         <!-- Vrch -->
         <img id="portalImg" src="./asset/portal.png">
@@ -40,7 +46,9 @@
       </a-entity>
 
 <!-- System -->
-      <a-camera id="player" position="0 1.6 7.5" far="1000" fov="75"></a-camera>
+      <a-camera id="player" position="0 1.6 7.5" far="1000" fov="75">
+        <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="0 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+      </a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
@@ -54,8 +62,7 @@
           <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
           <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
         </a-entity>
-        <a-entity class="portalText" text="color: #ffffff; align: center; baseline: bottom; value: VIRTUALITY; side: double; width: 4" position="0 0 0"></a-entity>
-        <a-entity class="portalTextMirror" text="color: #ffffff; align: center; baseline: bottom; value: VIRTUALITY; side: double; width: 4" position="0 0 0" scale="1 -1 1"></a-entity> 
+        <a-entity class="portalText" geometry="primitive: plane; width: 1; height: 0.5" material="src: #virtuality; alphaTest: 0.1; blending: additive" position="0 0.2 0"></a-entity>
       </a-entity>
 
       <a-entity id="real-portal" click-url="./reality.html" rotation="0 -136.54214511542162 0" position="6.51318 0 7.10872" mixin="portal" look-at="" geometry="" raycastable="" animation__mouseenterscale=""> 
@@ -63,8 +70,7 @@
           <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #e2b503; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
           <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #e2b503; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
         </a-entity>
-        <a-entity class="portalText" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0"></a-entity>
-        <a-entity class="portalTextMirror" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0" scale="1 -1 1"></a-entity> 
+        <a-entity class="portalText" geometry="primitive: plane; width: 1; height: 0.5" material="src: #reality; alphaTest: 0.1; blending: additive" position="0 0.2 0"></a-entity>
       </a-entity>
 
     
