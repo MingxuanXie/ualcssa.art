@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/aframe-look-at-component.min.js"></script>
+    <script src="./js/click-url-delay.js"></script>
   </head>
   <body>
 
@@ -22,6 +23,10 @@
 
 <!-- Assets -->
       <a-assets>
+      <!-- UI -->
+      <img id="reality" src="./asset/reality.png" alt="">
+      <img id="virtuality" src="./asset/virtuality.png" alt="">
+      <img id="cafe" src="./asset/cafe.png" alt="">
       <!-- Tag -->
       <img id="tagimg02" src="./asset/tags/tag_Page_02.png" alt="">
       <img id="tagimg05" src="./asset/tags/tag_Page_05.png" alt="">
@@ -84,7 +89,7 @@
       <!-- Tags -->
       <a-entity id="tag02" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg02" position="-8.7333 1.6 3.54586"></a-entity> 
       <a-entity id="tag05" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg05" position="-6.56167 1.6 -5.20331"></a-entity> 
-      <a-entity id="tag08" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg08" position="-6.31465 1.6 -12.12163"></a-entity> 
+      <a-entity id="tag08" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg08; fog: false" position="-6.31465 1.6 -12.12163"></a-entity> 
       <a-entity id="tag10" geometry="height: 0.353" rotation="0 0 0" mixin="tag" material="src: #tagimg10" position="19.64627 1.6 -4.73214"></a-entity> 
       <a-entity id="tag13" geometry="height: 0.353" rotation="0 0 0" mixin="tag" material="src: #tagimg13" position="10.84505 1.6 -7.19975"></a-entity> 
       <a-entity id="tag14" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg14" position="4.16616 1.6 0.43013"></a-entity> 
@@ -166,8 +171,19 @@
 
 
 <!-- System -->
-      <a-camera id="player" twoway-motion="nonMobileLoad: false; speed: 100; threshold: -45"  position="0 1.6 14.5" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+      <a-entity id="cameraRigv"
+      animation__turnaround="property: rotation; dur: 500; to: 0 0 180; startEvents: turnaround">
+        <a-camera id="player" position="0 1.6 15" far="1000" fov="75">
+          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.2; height: 0.1; depth: 0.05"
+                    proxy-event__click="event: click; to: #cameraRigv; as: turnaround"  
+                    click-url-delay="./reality.html"
+                    material="visible: false"
+          ></a-entity>
+          <a-image id="realitytitle" material="alphaTest: 0.1; blending: additive" src="#reality" position="0 -0.18 -0.3" rotation="-45 0 0" width="0.12" height="0.05"></a-image>
+        </a-camera>
+      </a-entity>
 
 <!-- Lights -->
 <a-entity light="color: #e2dcc5; intensity: 0.3" position="0 1 2"></a-entity>

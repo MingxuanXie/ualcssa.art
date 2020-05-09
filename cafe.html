@@ -9,6 +9,7 @@
     <script src="./js/aframe-gif-shader.min.js"></script>
     <script src="./js/video-handler.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="./js/aframe-look-at-component.min.js"></script>
     <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/click-url.js"></script>
   </head>
@@ -19,20 +20,18 @@
 
 <!-- Assets -->
       <a-assets>
+        <img id="tagimg03" src="./asset/tags/tag_Page_03.png" alt="">
         <video id="03" autoplay muted="true" loop="true" src="./asset/03/little_red_music_restaurant.mp4"></video>
         <img id="lighttex" src="./asset/lightball.png">
         <!-- Vrch -->
         <img id="portalImg" src="./asset/portal.png">
         <a-mixin id="portal" material="visible: false" geometry="primitive: circle; segments: 24;" raycastable="" scale="2.5 2.5 2.5" animation__mouseenterscale="property: scale; from: 2.5 2.5 2.5; to: 2.8 2.8 2.8; easing: easeInOutQuad; dir: alternate; loop: true; startEvents: mouseenter; dur: 1000; pauseEvents: mouseleave"></a-mixin>
+        <a-mixin id="tag" look-at="#player" geometry="primitive: plane; width: 0.25; height: 0.3535" material="" event-set__makevisible="_event: mouseenter; scale: 4 4 4" event-set__leave="_event: mouseleave; scale: 1 1 1"></a-mixin>
       </a-assets>
 
-<!-- Template -->
-      <!-- Stand -->
-      <!-- <a-circle id="stand" geometry="segments: 36" material="blending: normal; wireframe: false; transparent: false; color: #ffffff; depthTest: true" scale="0.5 0.5 0.5" position="-0.01276 1 1.49386" rotation="-90 0 0"><a-sphere id="stand-base" material="blending: none" rotation="90 0 0" geometry="thetaLength: 90; thetaStart: 90"></a-sphere></a-circle> -->
-      <!-- Hoovered Text -->
-      <!-- <a-box scale="10 10 10" visible="false" event-set__makevisible="_event: mouseenter; visible: true" event-set__leave="_event: mouseleave; visible: false"></a-box> -->
-
 <!-- Exhibits -->
+      <!-- tag -->
+      <a-entity id="tag03" geometry="height: 0.353" mixin="tag" material="src: #tagimg03" position="0.42933 1.2 6.06581"></a-entity> 
       <!-- 03 -->
       <a-cylinder id="cafe-video01" rotation="0 -135 0" position="-0.4 3.25 1.5" scale="-1.633 1.633 1.633" geometry="openEnded: true; height: 4; radius: 5; thetaLength: 120" material="src: #03; side: back; fog: false;" video-handler></a-cylinder>
       <a-entity scale="1 -1 1">
@@ -41,7 +40,7 @@
       </a-entity>
 
 <!-- System -->
-      <a-camera id="player" position="0 1.6 10" far="1000" fov="75"></a-camera>
+      <a-camera id="player" position="0 1.6 7.5" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
 
 <!-- Lights -->
@@ -61,8 +60,8 @@
 
       <a-entity id="real-portal" click-url="./reality.html" rotation="0 -136.54214511542162 0" position="6.51318 0 7.10872" mixin="portal" look-at="" geometry="" raycastable="" animation__mouseenterscale=""> 
         <a-entity rotation="0 90 90">
-          <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
-          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #03c1e2; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
+          <a-entity class="portalEffect1" obj-model="obj: ./asset/portal.obj"  material="color: #e2b503; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.017"  scale="3.116 5 3.116" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear"></a-entity> 
+          <a-entity class="portalEffect2" obj-model="obj: ./asset/portal.obj"  material="color: #e2b503; opacity: 1; depthWrite: false; shader: flat; fog: false; transparent: true; src: #portalImg" position="0 0 -0.058"  scale="3.078 0.969 3.078" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 15000; loop: true; easing: linear"></a-entity> 
         </a-entity>
         <a-entity class="portalText" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0"></a-entity>
         <a-entity class="portalTextMirror" text="color: #ffffff; align: center; baseline: bottom; value: REALITY; side: double; width: 4" position="0 0 0" scale="1 -1 1"></a-entity> 

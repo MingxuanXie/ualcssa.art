@@ -15,6 +15,7 @@
     <script src="./js/aframe-look-at-component.min.js"></script>
     <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/click-url-new-win.js"></script>
+    <script src="./js/click-url-delay.js"></script>
   </head>
   <body>
 
@@ -70,6 +71,10 @@
       <!-- <a-box scale="10 10 10" visible="false" event-set__makevisible="_event: mouseenter; visible: true" event-set__leave="_event: mouseleave; visible: false"></a-box> -->
 
 <!-- Exhibits -->
+      <!-- UI -->
+      <img id="reality" src="./asset/reality.png" alt="">
+      <img id="virtuality" src="./asset/virtuality.png" alt="">
+      <img id="cafe" src="./asset/cafe.png" alt="">
       <!-- Tags -->
       <a-entity id="tag04" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg06" position="-11.58073 1.6 -12.66832"></a-entity> 
       <a-entity id="tag06" rotation="0 0 0" geometry="height: 0.353" mixin="tag" material="src: #tagimg06" position="11.97747 1.6 4.46521"></a-entity> 
@@ -147,8 +152,18 @@
       </a-entity>
 
 <!-- System -->
-      <a-camera id="player" position="0 1.6 14.5" far="1000" fov="75"></a-camera>
       <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+      <a-entity id="cameraRigr" animation__turnaround="property: rotation; dur: 500; to: 0 0 180; startEvents: turnaround">
+        <a-camera id="player" position="0 1.6 15" far="1000" fov="75">
+          <a-entity position="0 -0.18 -0.3" geometry="primitive: box; width: 0.2; height: 0.1; depth: 0.05"
+                    proxy-event__click="event: click; to: #cameraRigr; as: turnaround"  
+                    click-url-delay="./virtuality.html"
+                    material="visible: false"
+          ></a-entity>
+          <a-image id="virtualitytitle" material="alphaTest: 0.1; blending: additive" src="#virtuality" position="0 -0.18 -0.3" rotation="-45 0 0" width="0.12" height="0.05"></a-image>
+        </a-camera>
+      </a-entity>
 
 <!-- Lights -->
 <a-entity light="color: #e2dcc5; intensity: 0.3" position="0 1 2"></a-entity>
