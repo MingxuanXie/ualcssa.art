@@ -25,6 +25,8 @@
 
 <!-- Assets -->
       <a-assets>
+        <img id="instruct-img2" src="./asset/instruction2.png" alt="">
+        <img id="instruct-img3" src="./asset/instruction3.png" alt="">
         <!-- UI -->
         <img id="reality" src="./asset/reality.png" alt="">
         <img id="virtuality" src="./asset/virtuality.png" alt="">
@@ -137,7 +139,7 @@
       </a-entity>
 
       <!-- Exhibition Statement -->
-      <a-entity id="exhibition-statement" position="0 0 1" scale="">
+      <a-entity id="exhibition-statement" position="0 0 0.1" scale="">
         <a-plane id="statement-screen" material="shader: gif; src: url(./asset/billboard/text.gif); blending: normal; fog: false" 
                 geometry="height: 4.15; width: 4.15" 
                 position="0 2.0564 0.197"></a-plane>>
@@ -159,9 +161,9 @@
                     click-url-delay="./virtuality.html"
                     material="visible: false"
           ></a-entity>
-          <a-image id="virtualitytitle" material="alphaTest: 0.1; blending: additive" src="#virtuality" position="0 -0.2 -0.3" rotation="-45 0 0" width="0.1" height="0.04"></a-image>
-          <a-image id="cafebutton" click-url="./cafe.html" material="alphaTest: 0.1; blending: additive" src="#cafe-button" position="0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
-          <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="-0.15 -0.2 -0.3" rotation="-30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+          <a-image id="virtualitytitle" material="alphaTest: 0.1; blending: additive" src="#virtuality" position="0 0.2 -0.3" rotation="45 0 0" width="0.1" height="0.04"></a-image>
+          <a-image id="cafebutton" click-url="./cafe.html" material="alphaTest: 0.1; blending: additive" src="#cafe-button" position="0.15 0.2 -0.3" rotation="30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
+          <a-image id="chatbutton" click-url-new-win="https://kaihei.co/1mQWQS" material="alphaTest: 0.1; blending: additive" src="#chat-button" position="-0.15 0.2 -0.3" rotation="30 0 0" width="0.1" height="0.03" scale="0.8 0.8 0.8"></a-image>
 
         </a-camera>
       </a-entity>
@@ -171,8 +173,8 @@
 <a-entity light="type: ambient; color: #e3f0e9; intensity: 0.7; groundColor: #ffffff"></a-entity>
 
 <!-- Scene -->
-
- 
+      <a-image id="instruction2" rotation="-75 0 0" material="alphaTest: 0.15; blending: additive; color: #ffffff" position="-0.75 0.15 12.5" src="#instruct-img2"></a-image>
+      <a-image id="instruction3" rotation="-75 0 0" material="alphaTest: 0.15; blending: additive" position="0.75 0.15 12.5" src="#instruct-img3"></a-image>
       <!-- Vrch -->
 
       <a-sphere id="sphere01" geometry="phiLength: 120; radius: 10" material="side: back; transparent: false; blending: normal; fog: false; opacity: 0.8; color: #ffffff; roughness: 0.45" rotation="-90 0 0" position="-10.42887 0 -4.28449" phi-length="270"></a-sphere>
